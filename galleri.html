@@ -2,20 +2,63 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleri</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Galleri</title>
+	<link rel="stylesheet" href="style_gal.css">
+	<link href="https://fonts.googleapis.com/css?family=Kanit|PT+Sans+Narrow|Teko" rel="stylesheet">
+	<link rel="icon" href="" type="image/gif" sizes="16x16">
 
 </head>
 
 <body>
+	<div id="modal_fullscreen">
+		<div id="modal_vindue">
+			<button id="modal_button">X</button>
+			<div id="modal_content">
 
-    <div id="images">
-        <section class="container">
 
-        </section>
-        <template data-template>
+			</div>
+		</div>
+	</div>
+	<section class="top">
+
+		<div class="logo">
+			<img src="pics/midlertidigt_logo.png">
+		</div>
+		<h1>Galleri</h1>
+
+		<header>
+			<!--Burgermenu- mobil visning-->
+			<button class="burger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+			<nav>
+				<ul>
+					<li>link 1</li>
+					<li>link 2</li>
+					<li>link 3</li>
+					<li>link 3</li>
+				</ul>
+			</nav>
+
+
+
+		</header>
+
+	</section>
+	<div id="gal_infotxt">
+		<p id="info1">Da min keramik er unika, og hvert værk efter brænding og arbejdsprocessen får sit helt eget look, er disse billeder eksempler på mit arbejde. På min instagram og facebook er der flere billeder, hvis du vil se mere. Du skal være velkommen til at kontakte mig, hvis du er interreseret i et af mine værker, så vil jeg se om jeg har noget ligende.
+		</p>
+	</div>
+
+	<div id="images">
+		<section class="container">
+
+		</section>
+		<template data-template>
 
 
             <article>
@@ -25,9 +68,30 @@
 
         </template>
 
-    </div>
-    <script src="script_gal.js"></script>
+	</div>
+	<script src="script_gal.js"></script>
+	<footer>
+		<div class="adresse">
+			<a>
+                Charlotte Nielsen<br>
+                Reerslevvej 20A – Reerslev<br>
+                4291 Ruds Vedby<br>
+                Mob. 6095 2369<br>
+                Mail:<a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
+			</a>
+		</div>
 
+		<div class="some">
+			<img src="pics/midlertidigt-facebook.png">
+			<img src="pics/midlertidigt-instagram.png">
+		</div>
+
+		<div class="nyhedsbrev">
+			<a>her skal nyhedsbrevet værer</a>
+		</div>
+
+
+	</footer>
 
 
 </body>

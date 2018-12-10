@@ -53,11 +53,13 @@ header {
     display: grid;
     grid-template-columns: 1fr;
 
+
 }
 
 .logo img {
     width: 5%;
 }
+
 
 
 .top {
@@ -66,7 +68,7 @@ header {
 }
 
 .top h1 {
-    position: absolute;
+
     left: 40%;
     top: 2.5vw;
 }
@@ -78,6 +80,8 @@ header {
 
 
 /*--------------------------------------------------------*/
+
+
 
 /*Burgermenu*/
 
@@ -162,6 +166,9 @@ nav.show {
 
 /*--------------------------------------------------------*/
 
+/*Galleri*/
+
+/*--------------------------------------------------------*/
 
 /* CV */
 
@@ -206,17 +213,7 @@ nav.show {
 
 /*--------------------------------------------------------*/
 
-/*Galleri*/
 
-.container {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-}
-
-.gal_img img {
-    width: 50vw;
-    height: 40vw;
-}
 
 
 
