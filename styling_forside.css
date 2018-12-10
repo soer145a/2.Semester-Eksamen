@@ -42,6 +42,13 @@ p {
 
 }
 
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
 body {
     background-color: var(--stoney);
 }
@@ -49,11 +56,6 @@ body {
 /*--------------------------------------------------------*/
 
 /*Header*/
-header {
-    display: grid;
-    grid-template-columns: 1fr;
-
-}
 
 .logo img {
     width: 5%;
@@ -90,8 +92,9 @@ header {
     position: absolute;
     top: 4vw;
     right: 4vw;
-    transform: scale(1.6)
+    transform: scale(0.5);
 }
+
 
 ul {
     list-style: none;
@@ -162,65 +165,50 @@ nav.show {
 
 /*--------------------------------------------------------*/
 
+/*Forside*/
 
-/* CV */
+.for_splash img {
+    width: 75%;
+    display: block;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
 
-#cv {
+}
+
+.for_presentation h1 {
+    text-align: center;
+
+}
+
+.for_presentation {
+    width: 70vw;
+    margin: auto;
+}
+
+.for_imgcontainer {
     display: grid;
-    grid-template-columns: 1fr;
-
-}
-
-#cv #om {
-    background-color: #809DAE;
-    width: 90vw;
-    margin: 5vw;
-}
-
-#om img {
-    border-radius: 50%;
-    width: 60vw;
-    margin: auto;
-
-}
-
-#ombillede {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    margin-top: 4vw;
-}
-
-#om p {
-    margin: 2vw;
-}
-
-#om h2 {
-    text-align: center;
-}
-
-#udstillinger {
-    margin: 3vw;
-    /*    grid-column: 2/4;*/
-}
-
-/*--------------------------------------------------------*/
-
-/*Galleri*/
-
-.container {
     grid-template-columns: 1fr 1fr;
-    display: grid;
+    width: 30vw;
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-.gal_img img {
-    width: 50vw;
-    height: 40vw;
+.for_portraet img {
+    width: 100%;
+
+}
+
+.for_signatur img {
+    width: 100%;
+    display: block;
+
+
 }
 
 
-
-/*--------------------------------------------------------*/
 
 /*Footer*/
 footer {
