@@ -8,7 +8,8 @@
 }
 
 :root {
-	font-size: 62.5%;
+	font-size: 65.5%;
+
 
 	--stoney: #ECE4DC;
 	--ufo: #989FA3;
@@ -24,8 +25,6 @@ h1 {
 	left: 20%;
 	top: 1vw;
 	font-family: 'Kanit', sans-serif;
-	color: ;
-	font-size: ;
 
 }
 
@@ -125,14 +124,19 @@ body {
 	width: 80vw;
 	height: 60vw;
 
+
 }
 
 .gal_img {
 	text-align: center;
 }
 
+article {
+	pointer-events: none;
+}
+
 .gal_img p {
-	line-height: 20vw;
+	padding: 5vw;
 }
 
 
@@ -147,13 +151,13 @@ main {}
 .burger {
 	/*         display: inline-block;*/
 	cursor: pointer;
-	background: #fff;
+	background: var(--ufo);
 	border: none;
 	justify-self: end;
 	position: absolute;
 	top: 4vw;
 	right: 4vw;
-	transform: scale(1.6)
+	transform: scale(1.6);
 }
 
 ul {
@@ -218,4 +222,120 @@ nav.show {
 	li {
 		display: inline-block;
 	}
+}
+
+/* HER STARTER CSS*/
+
+#gal_infotxt {
+	width: 80vw;
+	margin: auto;
+	font-size: 1.5em;
+	font-family: 'PT Sans Narrow', sans-serif;
+	line-height: normal;
+	border-radius: 5vw;
+	margin-top: 5vw;
+}
+
+#info1 {
+	padding: 5vw;
+}
+
+#modal_fullscreen {
+	pointer-events: none;
+
+}
+
+#modal_button {
+	pointer-events: none;
+	display: none;
+}
+
+/* Desktop media querry */
+
+@media screen and (min-width: 1080px) {
+	.container {
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 80vw;
+		margin: auto;
+	}
+	.gal_img img {
+		width: 20vw;
+		height: 16vw;
+	}
+	.gal_img p {
+		padding: 2vw;
+
+	}
+	.gal_img img:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+	#gal_infotxt {
+		background-color: var(--stoney);
+		width: 50vw;
+		margin: 0;
+		margin-left: 13vw;
+		font-size: 2.5em;
+		letter-spacing: 0px;
+		font-family: 'PT Sans Narrow', sans-serif;
+		line-height: normal;
+		border-radius: 0vw;
+		line-height: 1vw;
+		margin-top: 2vw;
+	}
+
+
+	#info1 {
+		padding: 1vw;
+	}
+	article {
+		pointer-events: all;
+	}
+	#modal_fullscreen {
+		position: fixed;
+		width: 100vw;
+		height: 56.5vw;
+		pointer-events: all;
+		background-color: rgba(0, 0, 0, 0.80);
+		top: 0;
+		right: 0;
+		transition: 0.2s;
+		display: none;
+		z-index: 8;
+
+	}
+	#modal_content {
+		position: absolute;
+		width: 80vw;
+		height: 40vw;
+		text-align: center;
+		z-index: 10;
+
+	}
+	#modal_vindue {
+		position: absolute;
+		width: 80vw;
+		height: 40vw;
+		z-index: 9;
+		left: 10vw;
+		top: 6vw;
+
+	}
+	#modal_content img {
+		width: 50vw;
+		height: 40vw;
+	}
+	#modal_button {
+		position: absolute;
+		right: 13vw;
+		transform: scale(2);
+		z-index: 11;
+		width: 1vw;
+		height: 1vw;
+		display: block !important;
+		pointer-events: all;
+		border-radius: 1vw;
+		border-style: none;
+	}
+
 }
