@@ -120,12 +120,7 @@ body {
 	display: grid;
 }
 
-.gal_img img {
-	width: 80vw;
-	height: 60vw;
-
-
-}
+.gal_img img {}
 
 .gal_img {
 	text-align: center;
@@ -258,10 +253,7 @@ nav.show {
 		width: 80vw;
 		margin: auto;
 	}
-	.gal_img img {
-		width: 20vw;
-		height: 16vw;
-	}
+	.gal_img img {}
 	.gal_img p {
 		padding: 2vw;
 
@@ -321,10 +313,7 @@ nav.show {
 		top: 6vw;
 
 	}
-	#modal_content img {
-		width: 50vw;
-		height: 40vw;
-	}
+	#modal_content img {}
 	#modal_button {
 		position: absolute;
 		right: 13vw;
