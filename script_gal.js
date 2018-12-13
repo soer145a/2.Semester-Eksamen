@@ -28,10 +28,13 @@ function visImg() {
 			});
 			klon.querySelector(".gal_img").innerHTML = billede.content.rendered;
 
+
 			dest.appendChild(klon);
 		}
 
+
 	);
+
 }
 
 function visModal(billede) {

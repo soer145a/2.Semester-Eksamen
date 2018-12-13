@@ -1,56 +1,55 @@
 /*General settings*/
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
 
 }
 
 :root {
-    font-size: 62.5%;
+	font-size: 62.5%;
 
-    --stoney: #ECE4DC;
-    --ufo: #989FA3;
-    --french: #7F9DAE;
-    --sorceres: #677F86;
+	--stoney: #ECE4DC;
+	--ufo: #989FA3;
+	--french: #7F9DAE;
+	--sorceres: #677F86;
 
 }
 
 /*--------------------------------------------------------*/
 
-
 /* Fonte */
 
 h1 {
 
-    left: 20%;
-    top: 1vw;
-    font-family: 'Kanit', sans-serif;
-    color: ;
-    font-size: ;
+	left: 20%;
+	top: 1vw;
+	font-family: 'Kanit', sans-serif;
+	color: ;
+	font-size: ;
 
 }
 
 h2 {
-    font-family: 'Teko', sans-serif;
+	font-family: 'Teko', sans-serif;
 }
 
 p {
-    font-family: 'PT Sans Narrow', sans-serif;
-    line-height: normal;
+	font-family: 'PT Sans Narrow', sans-serif;
+	line-height: normal;
 
 }
 
 
 header {
-    display: grid;
-    grid-template-columns: 1fr;
+	display: grid;
+	grid-template-columns: 1fr;
 
 }
 
 body {
-    background-color: var(--stoney);
+	background-color: var(--stoney);
 }
 
 /*--------------------------------------------------------*/
@@ -58,24 +57,24 @@ body {
 /*Header*/
 
 .logo img {
-    width: 5%;
+	width: 5%;
 }
 
 
 .top {
-    background-color: var(--ufo);
-    width: 100%;
+	background-color: var(--ufo);
+	width: 100%;
 }
 
 .top h1 {
-    position: absolute;
-    left: 40%;
-    top: 2.5vw;
+	position: absolute;
+	left: 40%;
+	top: 2.5vw;
 }
 
 .container {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -85,82 +84,82 @@ body {
 
 .burger {
 
-    cursor: pointer;
-    background: var(--ufo);
-    border: none;
-    justify-self: end;
-    position: absolute;
-    top: 4vw;
-    right: 4vw;
-    transform: scale(0.5);
+	cursor: pointer;
+	background: var(--ufo);
+	border: none;
+	justify-self: end;
+	position: absolute;
+	top: 4vw;
+	right: 4vw;
+	transform: scale(0.5);
 }
 
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 li {
-    padding: 5px;
-    cursor: pointer;
-    border-bottom: 1px solid #000;
+	padding: 5px;
+	cursor: pointer;
+	border-bottom: 1px solid #000;
 }
 
 
 .bar1,
 .bar2,
 .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
 }
 
 nav {
-    max-height: 0px;
-    overflow: hidden;
-    transition: 0.6s;
-    background: #666;
-    color: #fff;
+	max-height: 0px;
+	overflow: hidden;
+	transition: 0.6s;
+	background: #666;
+	color: #fff;
 }
 
 nav.show {
-    max-height: 500px;
+	max-height: 500px;
 }
 
 /* rotere øverste bar - burgermenu */
 
 .change .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 /* fader midterbar ud - burgermenu */
 
 .change .bar2 {
-    opacity: 0;
+	opacity: 0;
 }
 
 /* rotere nederste bar - burgermenu */
 
 .change .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 
 @media screen and (min-width:768px) {
-    .burger {
-        display: none;
-    }
+	.burger {
+		display: none;
+	}
 
-    nav {
-        max-height: 200px;
-    }
+	nav {
+		max-height: 200px;
+	}
 
-    li {
-        display: inline-block;
-    }
+	li {
+		display: inline-block;
+	}
 }
 
 /*--------------------------------------------------------*/
@@ -170,6 +169,11 @@ nav.show {
 .akt_overskrift {}
 
 .akt_overskrift h1 {}
+
+.akt_img {
+	width: 10vw;
+	height: 10vw;
+}
 
 .akt_event1 {}
 
@@ -182,27 +186,28 @@ nav.show {
 
 
 /*Footer*/
+
 footer {
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    background-color: var(--french);
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+	background-color: var(--french);
 
 }
 
 .adresse {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 .some img {
-    width: 3%;
-    margin-left: 20px;
-    margin-top: 3px;
+	width: 3%;
+	margin-left: 20px;
+	margin-top: 3px;
 }
 
 .nyhedsbrev {
-    position: absolute;
-    right: 20vw;
-    bottom: 10vw;
-    width: 1vw;
+	position: absolute;
+	right: 20vw;
+	bottom: 10vw;
+	width: 1vw;
 }
