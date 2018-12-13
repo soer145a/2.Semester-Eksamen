@@ -212,7 +212,7 @@ nav.show {
 }
 
 #ombillede {
-	width: 100%;
+	width: 90vw;
 	margin: auto;
 	text-align: center;
 	margin-top: 4vw;
@@ -228,7 +228,46 @@ nav.show {
 
 #udstillinger {
 	margin: 3vw;
-	/*    grid-column: 2/4;*/
+}
+
+@media screen and (min-width: 1080px) {
+	#ombillede img {
+		width: 15vw;
+
+	}
+	#ombillede {
+		text-align: center;
+		width: 20vw;
+	}
+	#om {
+		width: 20vw !important;
+		margin: 0;
+	}
+	#cv {
+		grid-template-columns: 1fr 2fr;
+	}
+	#headline {
+		text-align: center;
+		position: absolute;
+		top: 11vw;
+		right: 35vw;
+		font-size: 3em;
+	}
+	.container {
+		margin-top: 5vw;
+	}
+	#line {
+		width: 30vw;
+	}
+	.cv_titel {
+		font-size: 2.5em;
+	}
+	.cv_indhold {
+		font-size: 2em;
+	}
+	#omTxT {
+		font-size: 2em;
+	}
 }
 
 /*--------------------------------------------------------*/
