@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0/favicon-16x16.png">
+	<link rel="manifest" href="favicon_package_v0/site.webmanifest">
+	<link rel="mask-icon" href="favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<title>Index fil</title>
+</head>
+
+<body>
+
+	<section class="top">
+
+		<div class="logo">
+			<img src="pics/midlertidigt_logo.png">
+		</div>
+		<h1 data-sidenavn></h1>
+
+		<header>
+			<!--Burgermenu- mobil visning-->
+			<button class="burger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Forside</a></li>
+					<li><a href="galleri.html">Galleri</a></li>
+					<li><a href="stilart.html">Stilart</a></li>
+					<li><a href="aktuelt.html">Aktuelt</a></li>
+					<li><a href="cv.html">CV</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+				</ul>
+			</nav>
+
+
+
+		</header>
+
+	</section>
+	<div id="kontaktInfo">
+		<p data-navn></p>
+		<p data-adresse></p>
+		<p data-postnmr></p>
+		<p> Telefon: <span data-tlf></span></p>
+		<p> Email: <span data-email></span></p>
+		<p data-ekstra></p>
+	</div>
+
+
+
+
+
+
+
+	<footer>
+		<div class="adresse">
+			<p>
+				Charlotte Nielsen<br> Reerslevvej 20A – Reerslev<br> 4291 Ruds Vedby<br> Mob. 6095 2369<br> Mail: <a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
+			</p>
+		</div>
+
+		<div class="some">
+			<img src="pics/fb.png">
+			<img src="pics/insta.png">
+		</div>
+
+		<div class="nyhedsbrev">
+			<a>nyhedsbrevet</a>
+		</div>
+
+
+	</footer>
+
+
+</body>
+
+</html>
+
+<script>
+    let kontaktJSON;
+
+
+    function onLoad() {
+
+        // if (window.innerWidth <= 768) {
+
+        function toggleMenu() {
+            document.querySelector(".burger").classList.toggle("change");
+            document.querySelector("nav").classList.toggle("show");
+        }
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+        document.querySelector("ul").addEventListener("click", toggleMenu);
+
+    }
+    //}
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        onLoad();
+        getJSON();
+    });
+
+
+    async function getJSON() {
+        myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/kontakt");
+        /* her sætter jeg mit array som wordpress henter, til at være en json fil */
+        kontaktJSON = await myJSON.json();
+        console.log(kontaktJSON);
+        vispage();
+
+
+    }
+
+    function vispage() {
+        console.log("vis tekst");
+        kontaktJSON.forEach(tag => {
+            document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
+			document.querySelector("[data-navn]").textContent = tag.acf.navn;
+			document.querySelector("[data-adresse]").textContent = tag.acf.adresse;
+			document.querySelector("[data-tlf]").textContent = tag.acf.tlf;
+			document.querySelector("[data-email]").textContent = tag.acf.email;
+			document.querySelector("[data-ekstra]").textContent = tag.acf.ekstra;
+			document.querySelector("[data-postnmr]").textContent = tag.acf.postnmr;
+
+
+
+        });
+    }
+
+</script>
