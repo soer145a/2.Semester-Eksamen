@@ -272,30 +272,170 @@ nav.show {
 
 /*--------------------------------------------------------*/
 
-/*--------------------------------------------------------*/
+/*        style af tilmeldingsblanket*/
 
-/*Footer*/
-
-footer {
-	width: 100vw;
-	position: absolute;
-	bottom: 0;
-	background-color: var(--french);
+#tilmeld {
+	background-color: #7F9DAE;
+	width: 20vh;
+	height: 12vh;
+	border-radius: 3.5px;
+	border: none;
+	text-align: center;
+	position: relative;
 }
 
-.adresse {
-	margin-left: 20px;
+#tilmeld p {
+	color: #DBDEDE;
+	font-weight: bold;
 }
 
-.some img {
-	width: 3%;
-	margin-left: 20px;
-	margin-top: 3px;
+/* css der bliver kaldt nede i javascript´en der gør at modal vinduet bliver åbnet*/
+
+#modal.vis {
+	opacity: 1;
+	pointer-events: all;
 }
 
-.nyhedsbrev {
-	position: absolute;
-	right: 20vw;
-	bottom: 10vw;
-	width: 1vw;
+/* css til luk knappen*/
+
+#close {
+	height: 20px;
+	width: 50px;
+	border-radius: 3.5px;
+	border: none;
+	background-color: #7F9DAE;
+	color: #DBDEDE;
+	margin: 3px;
 }
+
+/* css til luk knappens hover*/
+
+#close:hover,
+#close:focus {
+	color: rgba(127, 157, 174, 0.63);
+	text-decoration: none;
+	cursor: pointer;
+	margin: 5px;
+}
+
+
+/* css til modal vinduet*/
+
+#modal {
+	background-color: rgba(127, 157, 174, 0.15);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 1s;
+	position: fixed;
+	/*            display: none;*/
+}
+
+/* css til model content*/
+
+#modal-content {
+	margin: 5px;
+}
+
+/* css til submit knappen */
+
+input[type=submit] {
+	width: 50px;
+	height: 25px;
+	background-color: #7F9DAE;
+	color: #DBDEDE;
+	font-size: 15px;
+	text-align: center;
+	margin: 5px;
+	border-radius: 3.5px;
+	float: right;
+}
+
+/* css til email feltet*/
+
+input[type=email]:hover {
+	background-color: rgba(219, 222, 222, 0.31);
+	border-radius: 3.5px;
+}
+
+/* css til navne feltet*/
+
+input[type=text]:hover {
+
+	background-color: rgba(219, 222, 222, 0.31);
+	border-radius: 3.5px;
+}
+
+/* css til erklæring feltet*/
+
+input[type=checkbox] {
+
+	background-color: rgba(219, 222, 222, 0.31);
+	margin-right: -0;
+	margin-right: 5px;
+
+
+}
+
+/* css til de overordnede input*/
+
+input {
+	border-radius: 3.5px;
+	margin: 5px;
+}
+
+
+/* media screen til at hide hele nyhedsbrevet når det er på mobil*/
+
+@media screen and (max-width: 700px) {
+	.nyhedsbrev {
+		display: none;
+	}
+}
+
+/* media screen til blankettens placering*/
+
+@media screen and (min-width: 730px) {
+	#modal {
+		width: 50vw;
+		height: 50vw;
+		right: 25vw;
+		top: 10vw;
+	}
+}
+
+/* media screen til blankettens placering*/
+
+@media screen and (min-width: 1125px) {
+	#modal {
+		width: 30vw;
+		height: 50vw;
+		right: 0vw;
+		bottom: 0vw;
+	}
+
+
+	/*--------------------------------------------------------*/
+	/*Footer*/
+	footer {
+		width: 100vw;
+		position: absolute;
+		bottom: 0;
+		background-color: var(--french);
+	}
+
+	.adresse {
+		margin-left: 20px;
+	}
+
+	.some img {
+		width: 3%;
+		margin-left: 20px;
+		margin-top: 3px;
+	}
+
+	.nyhedsbrev {
+		position: absolute;
+		right: 20vw;
+		bottom: 10vw;
+		width: 1vw;
+	}
