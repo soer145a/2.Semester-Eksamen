@@ -205,9 +205,6 @@ footer {
 
 #billede2 {
 	text-align: center;
-
-
-
 }
 
 #tekst1 {
@@ -260,4 +257,108 @@ footer {
 	text-align: center;
 }
 
-@media screen and (min-width: 1080px) {}
+@media screen and (min-width: 1080px) {
+	#segmentContainer {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+
+	}
+	#billede2 img {
+		width: 30vw;
+	}
+
+	#billede2 {
+		text-align: center;
+	}
+
+	#tekst1 {
+		width: 60vw;
+		margin-bottom: 5vw;
+	}
+
+	#tekst1 p {
+		width: 50vw;
+		margin: 2vw;
+		font-size: 2em;
+	}
+
+	#tekst2 {
+		width: 60vw;
+		margin-bottom: 5vw;
+		margin: 2vw;
+	}
+
+	#tekst2 p {
+		width: 50vw;
+		margin: auto;
+		font-size: 2em;
+	}
+
+	#YTV {
+		width: 30vw;
+		height: 20vw;
+		margin-bottom: 5vw;
+
+	}
+
+	#billede1 {
+		text-align: center;
+
+	}
+
+	.stil_top h2 {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 5vw;
+		margin-top: 5vw;
+	}
+
+	#grafik1,
+	#grafik2,
+	#grafik3,
+	#grafik4 {
+		margin: 0;
+		width: 20vw;
+		margin: auto;
+		border-color: black;
+		border-style: solid;
+		font-size: 2em;
+
+	}
+	#grafikContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.stil_bottom h2 {
+		text-align: center;
+	}
+	#segment1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#segment2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#infografik {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		position: absolute;
+		width: 100vw;
+		top: 91vw;
+	}
+	.infografImg {
+		margin: auto;
+		transform: scale(1.3);
+	}
+	.infografImg img {
+		width: 10vw;
+		height: 8vw;
+	}
+	#streg img {
+		width: 100vw;
+	}
+
+
+}
