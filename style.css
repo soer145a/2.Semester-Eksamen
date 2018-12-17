@@ -491,8 +491,13 @@ footer {
 
 .adresse a {
     text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
+.adresse a:hover {
+    color: #DBDEDE;
+}
 
 .some_img {
     flex-grow: 1;
@@ -508,5 +513,6 @@ footer {
 }
 
 
-.some_img img:hover,
-    {}
+.some_img img:hover {
+    transform: scale(0.9);
+}
