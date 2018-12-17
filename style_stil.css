@@ -323,6 +323,8 @@ footer {
 		border-color: black;
 		border-style: solid;
 		font-size: 2em;
+		opacity: 0;
+		transition: 0.4s;
 
 	}
 	#grafikContainer {
@@ -359,6 +361,13 @@ footer {
 	#streg img {
 		width: 100vw;
 	}
+	#lidtned {
+		padding-top: 1.5vw;
+	}
 
 
+}
+
+.show {
+	opacity: 1 !important;
 }

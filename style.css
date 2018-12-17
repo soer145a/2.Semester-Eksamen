@@ -169,13 +169,15 @@ nav.show {
 #forsideh2 {
     text-align: center;
     margin-top: 5vw;
-    margin-bottom: 5vw;
+
 }
 
 #forsideDesc {
     width: 75vw;
-    margin: auto;
-    font-size: 100%;
+    margin-top: vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 140%;
 
 }
 
@@ -184,7 +186,7 @@ nav.show {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 30vw;
-    margin-top: 10vw;
+    margin-top: 5vw;
     margin-left: auto;
     margin-right: auto;
 
@@ -207,11 +209,12 @@ nav.show {
     }
 
     #forsideh2 {
-        font-size: 250%
+        font-size: 250%;
     }
 
     #forsideDesc {
-        font-size: 150%
+        font-size: 150%;
+
     }
 
     #portrait {
@@ -478,7 +481,6 @@ input {
 footer {
     width: 100vw;
     position: absolute;
-    bottom: 0;
     background: var(--french);
     display: flex;
     flex-wrap: nowrap;
