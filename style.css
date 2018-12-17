@@ -51,9 +51,9 @@ body {
 /*Header*/
 
 .logo img {
-    width: 3.5vw;
-    margin-left: 15px;
-    margin-top: 15px;
+    width: 3vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
 }
 
 .top {
@@ -103,6 +103,8 @@ li {
 }
 
 li a {
+    font-family: 'Teko', sans-serif;
+
     text-decoration: none;
     color: white;
 }
@@ -168,7 +170,7 @@ nav a:hover {
 
 
     li a {
-        font-size: 1.5em;
+        font-size: 1.8em;
         color: black;
     }
 
@@ -195,7 +197,7 @@ nav a:hover {
 #splash {
     width: 75%;
     display: block;
-    margin-top: 10vw;
+    margin-top: 5vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -258,12 +260,13 @@ nav a:hover {
     }
 
     #portrait {
-        width: 70%;
+        width: 80%;
 
     }
 
     #sign {
-        width: 30%;
+        width: 40%;
+        margin-top: 5em;
 
     }
 
@@ -494,7 +497,7 @@ footer {
         flex-grow: 1;
         flex-basis: 100px;
         padding-left: 50px;
-        margin-top: 5px;
+        margin-top: 10px;
 
     }
 
@@ -506,7 +509,7 @@ footer {
 
 /*--------------------------------------------------------*/
 
-/*style af Nyhedsbrev tilmeldings blanket*/
+/* Nyhedsbrev/ tilmeldings blanket*/
 
 #tilmeld {
     background-color: #7F9DAE;
@@ -517,7 +520,8 @@ footer {
     border-color: #DBDEDE;
     text-align: center;
     position: relative;
-    margin: 4px;
+    margin-top: 15px;
+    margin-right: 50px;
     border-style: solid;
     border-color: white;
 }
