@@ -323,6 +323,7 @@ footer {
 		border-color: black;
 		border-style: solid;
 		font-size: 2em;
+		opacity: 0;
 
 	}
 	#grafikContainer {
