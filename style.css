@@ -493,21 +493,16 @@ footer {
 .some_img {
     flex-grow: 1;
     flex-basis: 100px;
-    padding-left: 0;
+    padding-top: 4vw;
+    padding-left: 15vw;
 }
 
 .some_img img {
-    width: 15vw;
+    width: 8vw;
+    margin: 2vw;
 
-    /*
-    margin-left: 5px;
-    margin-top: 3px;
-*/
 }
 
-.nyhedsbrev {
-    position: absolute;
-    right: 20vw;
-    bottom: 10vw;
-    width: 1vw;
-}
+
+.some_img img:hover,
+{}
