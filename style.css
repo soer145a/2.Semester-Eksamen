@@ -138,6 +138,7 @@ nav a {
 }
 
 /*hover effekt på dropdown menuen i mobilvisningen*/
+
 nav a:hover {
     color: var(--stoney);
 }
@@ -400,6 +401,7 @@ footer {
 }
 
 /*hover på mail linket*/
+
 .adresse a:hover {
     color: black;
 }
