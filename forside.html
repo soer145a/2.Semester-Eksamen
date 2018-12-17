@@ -3,201 +3,229 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0/favicon-16x16.png">
-	<link rel="manifest" href="favicon_package_v0/site.webmanifest">
-	<link rel="mask-icon" href="favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
 
-	<title>Index fil</title>
+    <!-- faviconer   -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Index fil</title>
+
 </head>
 
 <body>
 
-	<section class="top">
+    <section class="top">
 
-		<div class="logo">
-			<img src="pics/midlertidigt_logo.png">
-		</div>
-		<h1 data-sidenavn></h1>
+        <div class="logo">
+            <img src="pics/logo.png">
+        </div>
+        <h1 data-sidenavn></h1>
 
-		<header>
-			<!--Burgermenu- mobil visning-->
-			<button class="burger">
+        <header>
+            <!--Burgermenu- mobil visning-->
+            <button class="burger">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </button>
-			<nav>
-				<ul>
-					<li><a href="index.html">Forside</a></li>
-					<li><a href="galleri.html">Galleri</a></li>
-					<li><a href="stilart.html">Stilart</a></li>
-					<li><a href="aktuelt.html">Aktuelt</a></li>
-					<li><a href="cv.html">CV</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
-				</ul>
-			</nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="galleri.html">Galleri</a></li>
+                    <li><a href="stilart.html">Stilart</a></li>
+                    <li><a href="aktuelt.html">Aktuelt</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
 
 
 
-		</header>
+        </header>
 
-	</section>
-	<img data-img1 id="splash" alt="Forside billede">
-	<h2 data-forsideh2 id="forsideh2"></h2>
-	<p data-desc id="forsideDesc"></p>
-	<img data-img2 id="portrait" alt="Et billede af Charlotte">
-	<img data-sign id="sign" alt="en signatur">
+    </section>
 
 
 
+    <div class="for_splash">
+        <img data-img1 id="splash" alt="Forside billede">
+    </div>
+
+
+    <main class="for_container">
+        <div class="for_presentation">
+
+            <h2 data-forsideh2 id="forsideh2"></h2>
+            <p data-desc id="forsideDesc"></p>
+        </div>
+
+        <div class="for_imgcontainer">
+            <div class="for_portraet">
+                <img data-img2 id="portrait" alt="Et billede af Charlotte">
+            </div>
+
+            <div class="for_signatur">
+                <img data-sign id="sign" alt="en signatur">
+
+            </div>
+        </div>
+    </main>
 
 
 
+    <footer>
+        <div class="adresse">
+            <p>
+                Charlotte Nielsen<br> Reerslevvej 20A – Reerslev<br> 4291 Ruds Vedby<br> Mob. 6095 2369<br> Mail: <a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
+            </p>
+        </div>
 
-	<footer>
-		<div class="adresse">
-			<p>
-				Charlotte Nielsen<br> Reerslevvej 20A – Reerslev<br> 4291 Ruds Vedby<br> Mob. 6095 2369<br> Mail: <a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
-			</p>
-		</div>
+        <div class="some_img">
+            <img src="pics/fb.png">
+            <img src="pics/insta.png">
+        </div>
 
-		<div class="some">
-			<img src="pics/fb.png">
-			<img src="pics/insta.png">
-		</div>
+        <!-- Tilmeldingsformular til Nyhedsbrev   -->
 
-		<div class="nyhedsbrev">
+        <div class="nyhedsbrev">
 
-			<!-- Knap til at åbne modal vindue/tilmeldings formular-->
+            <!-- Knap til at åbne modal vindue/tilmeldings formular-->
 
-			<button id="tilmeld"> <p>Tilmeld dig mit nyhedsbrev!</p> </button>
+            <button id="tilmeld">
+                <p>Tilmeld dig mit nyhedsbrev!</p>
+            </button>
 
-			<!-- html for modal   -->
-			<section id="modal">
-				<!-- lukke knap  -->
-				<button id="close">Luk</button>
-				<!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
-				<div id="modal-content">
-					<form>
-						<h1>Tilmeld dig mit nyhedsbrev!</h1>
-						<br>
-						<p> Bliv informeret om kommende udstillinger og nyheder, hurtigt og nemt. </p>
-						<br>
-						<input id="navn" type="text" placeholder="Dit navn" required>
-						<input id="email" type="email" placeholder="Din email" required><br>
-						<label>
-                <input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Charlotte Nielsen Keramik Nyhedsbrev </label><br>
-						<p> Ved at klikke ja erklære du dig enig med vilkår og betingelser og den tilhørende persondatapolitik. <a href="https://www.datatilsynet.dk/generelt-om-databeskyttelse/lovgivning/"> læs mere her</a> </p>
-						<input type="submit" value="send"> <span id="response"> </span> <br>
+            <!-- html for modal   -->
+            <section id="modal">
+                <!-- lukke knap  -->
+                <button id="close">Luk</button>
+                <!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
+                <div id="modal-content">
+                    <form>
+                        <h1>Tilmeld dig mit nyhedsbrev!</h1>
+                        <br>
+                        <p> Bliv informeret om kommende udstillinger og nyheder, hurtigt og nemt. </p>
+                        <br>
+                        <input id="navn" type="text" placeholder="Dit navn" required>
+                        <input id="email" type="email" placeholder="Din email" required><br>
+                        <label>
+                            <input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Charlotte Nielsen Keramik Nyhedsbrev </label><br>
+                        <p> Ved at klikke ja erklære du dig enig med vilkår og betingelser og den tilhørende persondatapolitik. <a href="https://www.datatilsynet.dk/generelt-om-databeskyttelse/lovgivning/"> læs mere her</a> </p>
+                        <input type="submit" value="send"> <span id="response"> </span> <br>
 
-					</form>
-				</div>
-			</section>
-		</div>
+                    </form>
+                </div>
+            </section>
+        </div>
 
-	</footer>
+    </footer>
 
 
 </body>
 
 </html>
 
+<!--Script:  her hentes json fil ind via wordpress-->
+
 <script>
-	let forsideJSON;
+    let forsideJSON;
 
 
-	function onLoad() {
+    function onLoad() {
 
-		// if (window.innerWidth <= 768) {
+        // if (window.innerWidth <= 768) {
 
-		function toggleMenu() {
-			document.querySelector(".burger").classList.toggle("change");
-			document.querySelector("nav").classList.toggle("show");
-		}
-		document.querySelector(".burger").addEventListener("click", toggleMenu);
-		document.querySelector("ul").addEventListener("click", toggleMenu);
+        function toggleMenu() {
+            document.querySelector(".burger").classList.toggle("change");
+            document.querySelector("nav").classList.toggle("show");
+        }
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+        document.querySelector("ul").addEventListener("click", toggleMenu);
 
-	}
-	//}
+    }
+    //}
 
-	document.addEventListener("DOMContentLoaded", function(event) {
-		onLoad();
-		getJSON();
-	});
-
-
-	async function getJSON() {
-		myJSON = await fetch("http://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
-		/* her sætter jeg mit array som wordpress henter, til at være en json fil */
-		forsideJSON = await myJSON.json();
-		console.log(forsideJSON);
-		vispage();
+    document.addEventListener("DOMContentLoaded", function(event) {
+        onLoad();
+        getJSON();
+    });
 
 
-	}
-
-	function vispage() {
-		console.log("vis tekst");
-		forsideJSON.forEach(tag => {
-			document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
-			document.querySelector("[data-img1]").setAttribute("src", tag.acf.splashbillede);
-			document.querySelector("[data-forsideh2]").textContent = tag.acf.sideoverskrift;
-			document.querySelector("[data-desc]").textContent = tag.acf.beskrivendetekst;
-			document.querySelector("[data-img2]").setAttribute("src", tag.acf.portrait);
-			document.querySelector("[data-sign]").setAttribute("src", tag.acf.signatur);
+    async function getJSON() {
+        myJSON = await fetch("http://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
+        /* her sætter jeg mit array som wordpress henter, til at være en json fil */
+        forsideJSON = await myJSON.json();
+        console.log(forsideJSON);
+        vispage();
 
 
-		});
-	}
+    }
+
+    function vispage() {
+        console.log("vis tekst");
+        forsideJSON.forEach(tag => {
+            document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
+            document.querySelector("[data-img1]").setAttribute("src", tag.acf.splashbillede);
+            document.querySelector("[data-forsideh2]").textContent = tag.acf.sideoverskrift;
+            document.querySelector("[data-desc]").textContent = tag.acf.beskrivendetekst;
+            document.querySelector("[data-img2]").setAttribute("src", tag.acf.portrait);
+            document.querySelector("[data-sign]").setAttribute("src", tag.acf.signatur);
 
 
-	let modal = document.querySelector("#modal");
-	let tilmeld = document.querySelector("#tilmeld");
-	let close = document.querySelector("#close");
+        });
+    }
 
-	//kode til at svar teksten bliver vist
-	let svartekst = "";
-	document.querySelector("form").addEventListener("submit", ajaxCall);
 
-	//kode
-	async function ajaxCall(e) {
-		e.preventDefault();
-		let navn = this.querySelector("input[type=text]").value;
-		console.log(navn);
-		let url = "nyhedsbrev.php?navn=" + navn;
-		let svar = await fetch(url);
-		svartekst = await svar.text();
-		show();
-		this.querySelector("input[type=text]").value = "";
-	}
+    // Script til Nyhedsbreve:
 
-	function show(response) {
-		document.querySelector("#response").textContent = svartekst;
-	}
+    let modal = document.querySelector("#modal");
+    let tilmeld = document.querySelector("#tilmeld");
+    let close = document.querySelector("#close");
 
-	tilmeld.addEventListener("click", visModal);
+    //kode til at svar teksten bliver vist
+    let svartekst = "";
+    document.querySelector("form").addEventListener("submit", ajaxCall);
 
-	function visModal() {
+    //kode
+    async function ajaxCall(e) {
+        e.preventDefault();
+        let navn = this.querySelector("input[type=text]").value;
+        console.log(navn);
+        let url = "nyhedsbrev.php?navn=" + navn;
+        let svar = await fetch(url);
+        svartekst = await svar.text();
+        show();
+        this.querySelector("input[type=text]").value = "";
+    }
 
-		//ved klik på tilmeldingsboxen vises modal vindu med indhold.
-		modal.classList.add("vis");
+    function show(response) {
+        document.querySelector("#response").textContent = svartekst;
+    }
 
-		//ved klik på close button fjernes modal vinduet med indholdet.
-		close.addEventListener("click", skjulModal);
+    tilmeld.addEventListener("click", visModal);
 
-	}
+    function visModal() {
 
-	function skjulModal() {
-		//css med modal vis bliver skjult igen
-		modal.classList.remove("vis");
-	}
+        //ved klik på tilmeldingsboxen vises modal vindu med indhold.
+        modal.classList.add("vis");
+
+        //ved klik på close button fjernes modal vinduet med indholdet.
+        close.addEventListener("click", skjulModal);
+
+    }
+
+    function skjulModal() {
+        //css med modal vis bliver skjult igen
+        modal.classList.remove("vis");
+    }
 
 </script>
