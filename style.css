@@ -160,7 +160,7 @@ nav.show {
 #splash {
     width: 75%;
     display: block;
-    margin-top: 5vw;
+    margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -169,12 +169,15 @@ nav.show {
 #forsideh2 {
     text-align: center;
     margin-top: 5vw;
+
 }
 
 #forsideDesc {
-    width: 50vw;
-    margin: auto;
-    font-size: 70%;
+    width: 75vw;
+    margin-top: vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 140%;
 
 }
 
@@ -189,11 +192,12 @@ nav.show {
 }
 
 #portrait {
-    width: 90%;
+    width: 20vw;
 }
 
 #sign {
-    width: 40%;
+    width: 10vw;
+    margin-left: 2vw;
     margin-bottom: 5vw;
     display: block;
 }
@@ -204,11 +208,12 @@ nav.show {
     }
 
     #forsideh2 {
-        font-size: 250%
+        font-size: 250%;
     }
 
     #forsideDesc {
-        font-size: 150%
+        font-size: 150%;
+
     }
 
     #portrait {
@@ -471,7 +476,6 @@ input {
 footer {
     width: 100vw;
     position: absolute;
-    bottom: 0;
     background: var(--french);
     display: flex;
     flex-wrap: nowrap;
@@ -487,8 +491,13 @@ footer {
 
 .adresse a {
     text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
+.adresse a:hover {
+    color: #DBDEDE;
+}
 
 .some_img {
     flex-grow: 1;
@@ -504,5 +513,6 @@ footer {
 }
 
 
-.some_img img:hover,
-{}
+.some_img img:hover {
+    transform: scale(0.9);
+}
