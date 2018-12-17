@@ -187,6 +187,7 @@ nav.show {
     margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 #portrait {
@@ -328,15 +329,19 @@ nav.show {
 #tilmeld {
     background-color: #7F9DAE;
     width: 20vh;
-    height: 12vh;
+    height: 11vh;
     border-radius: 3.5px;
-    border: none;
+    border-width: 0.5px;
+    border-color: #DBDEDE;
     text-align: center;
     position: relative;
+    margin: 4px;
+    border-style: solid;
+    border-color: white;
 }
 
 #tilmeld p {
-    color: #DBDEDE;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -363,7 +368,7 @@ nav.show {
 
 #close:hover,
 #close:focus {
-    color: rgba(127, 157, 174, 0.63);
+    color: rgb(127, 157, 174);
     text-decoration: none;
     cursor: pointer;
     margin: 5px;
@@ -373,7 +378,7 @@ nav.show {
 /* css til modal vinduet*/
 
 #modal {
-    background-color: rgba(127, 157, 174, 0.15);
+    background-color: rgba(127, 157, 174, 0.79);
     opacity: 0;
     pointer-events: none;
     transition: all 1s;
@@ -421,8 +426,8 @@ input[type=text]:hover {
 input[type=checkbox] {
 
     background-color: rgba(219, 222, 222, 0.31);
-    margin-right: -0;
-    margin-right: 5px;
+
+    margin: 5px;
 
 
 }
@@ -447,10 +452,10 @@ input {
 
 @media screen and (min-width: 700px) {
     #modal {
-        width: 50vw;
-        height: 50vw;
-        right: 25vw;
-        top: 10vw;
+        width: 40vw;
+        height: 35vw;
+        right: 0vw;
+        bottom: 0vw;
     }
 }
 
@@ -459,7 +464,7 @@ input {
 @media screen and (min-width: 1080px) {
     #modal {
         width: 30vw;
-        height: 50vw;
+        height: 35vw;
         right: 0vw;
         bottom: 0vw;
     }
@@ -477,6 +482,7 @@ footer {
     background: var(--french);
     display: flex;
     flex-wrap: nowrap;
+
 }
 
 .adresse {
@@ -497,20 +503,94 @@ footer {
     color: #DBDEDE;
 }
 
-.some_img {
-    flex-grow: 1;
-    flex-basis: 100px;
-    padding-top: 4vw;
-    padding-left: 15vw;
+
+
+
+
+@media screen and (max-width: 700px) {
+    .some_img {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-top: 1.5vw;
+        padding-left: 15vw;
+    }
+
+    .some_img img {
+        width: 8vw;
+        margin: 2vw;
+
+    }
+    .some_img a {
+        text-decoration: none;
+    }
+    .adresse {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-left: 50px;
+        margin-top: 5px;
+
+    }
+
 }
 
-.some_img img {
-    width: 8vw;
-    margin: 2vw;
 
+@media screen and (min-width: 700px) {
+    .some_img img:hover {
+        transform: scale(0.9);
+    }
+    .some_img {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-top: 1vw;
+        padding-left: 0vw;
+    }
+
+    .some_img img {
+        width: 5.5vw;
+        margin: 1.5vw;
+
+    }
+    .some_img a {
+        text-decoration: none;
+    }
+    .adresse {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-left: 50px;
+        margin-top: 5px;
+
+    }
 }
 
+@media screen and (min-width: 900px) {
+    .some_img img:hover {
+        transform: scale(0.9);
+    }
+    .some_img {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-top: 1.5vw;
+        padding-left: 0vw;
+    }
 
-.some_img img:hover {
-    transform: scale(0.9);
+    .some_img img {
+        width: 4vw;
+        margin: 1vw;
+
+    }
+    .some_img a {
+        text-decoration: none;
+    }
+    .adresse {
+        flex-grow: 1;
+        flex-basis: 100px;
+        padding-left: 50px;
+        margin-top: 5px;
+
+    }
+
+    .adresse {
+        font-size: 1.4em;
+    }
+
 }
