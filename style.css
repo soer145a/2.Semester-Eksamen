@@ -160,7 +160,7 @@ nav.show {
 #splash {
     width: 75%;
     display: block;
-    margin-top: 5vw;
+    margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -169,12 +169,13 @@ nav.show {
 #forsideh2 {
     text-align: center;
     margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
 #forsideDesc {
-    width: 50vw;
+    width: 75vw;
     margin: auto;
-    font-size: 70%;
+    font-size: 100%;
 
 }
 
@@ -183,17 +184,18 @@ nav.show {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 30vw;
-    margin-top: 5vw;
+    margin-top: 10vw;
     margin-left: auto;
     margin-right: auto;
 }
 
 #portrait {
-    width: 90%;
+    width: 20vw;
 }
 
 #sign {
-    width: 40%;
+    width: 10vw;
+    margin-left: 2vw;
     margin-bottom: 5vw;
     display: block;
 }
@@ -505,4 +507,4 @@ footer {
 
 
 .some_img img:hover,
-{}
+    {}
