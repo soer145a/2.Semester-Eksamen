@@ -261,6 +261,8 @@ footer {
 	#segmentContainer {
 		display: grid;
 		grid-template-rows: 1fr 1fr;
+		width: 80vw;
+		margin: auto;
 
 	}
 	#billede2 img {
@@ -272,32 +274,34 @@ footer {
 	}
 
 	#tekst1 {
-		width: 60vw;
-		margin-bottom: 5vw;
+		width: 40vw;
+		margin:
 	}
 
 	#tekst1 p {
-		width: 50vw;
+		width: 40vw;
 		margin: 2vw;
 		font-size: 2em;
+		line-height: 1.5vw;
 	}
 
 	#tekst2 {
-		width: 60vw;
+		width: 40vw;
 		margin-bottom: 5vw;
-		margin: 2vw;
+		margin: auto;
 	}
 
 	#tekst2 p {
-		width: 50vw;
+		width: 40vw;
 		margin: auto;
 		font-size: 2em;
+		line-height: 1.5;
 	}
 
 	#YTV {
 		width: 30vw;
 		height: 20vw;
-		margin-bottom: 5vw;
+		margin-bottom: 2vw;
 
 	}
 
@@ -320,13 +324,20 @@ footer {
 		margin: 0;
 		width: 20vw;
 		margin: auto;
-		border-color: black;
-		border-style: solid;
-		font-size: 2em;
+
+		padding: 1vw;
+
+		font-size: 2.1em;
 		opacity: 0;
+		border-style: solid;
+		border-color: var(--sorceres);
+
+
 		transition: 0.4s;
 
+
 	}
+
 	#grafikContainer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -348,7 +359,7 @@ footer {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		position: absolute;
 		width: 100vw;
-		top: 91vw;
+		top: 93vw;
 	}
 	.infografImg {
 		margin: auto;
