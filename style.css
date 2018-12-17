@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
 }
 
 :root {
@@ -471,10 +473,14 @@ footer {
     position: absolute;
     bottom: 0;
     background: var(--french);
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .adresse {
-    margin-left: 50px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    padding-left: 50px;
     margin-top: 5px;
 
 }
@@ -483,14 +489,20 @@ footer {
     text-decoration: none;
 }
 
+
 .some_img {
-    margin-left: 40px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    padding-left: 0;
 }
 
 .some_img img {
-    width: 8%;
+    width: 15vw;
+
+    /*
     margin-left: 5px;
     margin-top: 3px;
+*/
 }
 
 .nyhedsbrev {
