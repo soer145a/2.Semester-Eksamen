@@ -512,7 +512,7 @@ footer {
 /* Nyhedsbrev/ tilmeldings blanket*/
 
 #tilmeld {
-    background-color: #7F9DAE;
+    background-color: var(--french);
     width: 20vh;
     height: 11vh;
     border-radius: 3.5px;
@@ -578,13 +578,22 @@ footer {
     margin: 5px;
 }
 
+#modal-content form {
+    font-size: 150%;
+}
+
+#modal-content label {
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
 /* css til submit knappen */
 
 input[type=submit] {
     width: 50px;
     height: 25px;
     background-color: #7F9DAE;
-    color: #DBDEDE;
+    color: var(--stoney);
     font-size: 15px;
     text-align: center;
     margin: 5px;
