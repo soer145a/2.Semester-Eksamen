@@ -25,7 +25,7 @@
 			</a>
 		</div>
 
-		<h1> </h1>
+		<h1> Aktuelt</h1>
 
 		<header>
 			<!--Burgermenu- mobil visning-->
@@ -64,8 +64,10 @@
             <article>
                 <div class="akt_titel"></div>
                 <div class="akt_besk"></div>
-             <img data-img class="akt_img">
-                <a data-link><p>læse mere her!</p></a>
+                <div id="imgCont">
+             		<img data-img class="akt_img">
+				</div>
+                <a data-link class="akt_link"><p>læse mere her!</p></a>
             </article>
 
 
@@ -80,21 +82,53 @@
 	<footer>
 		<div class="adresse">
 			<p>
-				Charlotte Nielsen<br> Reerslevvej 20A – Reerslev<br> 4291 Ruds Vedby<br> Mob. 6095 2369<br> Mail:
-				<a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
+				Charlotte Nielsen<br> Reerslevvej 20A – Reerslev<br> 4291 Ruds Vedby<br> Mob. 6095 2369<br> Mail: <a href="mailto:cn.keramik@gmail.com">cn.keramik@gmail.com</a><br>
 			</p>
 		</div>
 
-		<div class="some">
-			<img src="pics/fb.png">
-			<img src="pics/insta.png">
+
+		<div class="some_img">
+			<a href="https://www.facebook.com/cn.keramik.dk/">
+                <img src="pics/fb.png">
+            </a>
+
+			<a href="https://www.instagram.com/charlottenielsenkeramik/">
+                <img src="pics/insta.png">
+            </a>
 		</div>
+
+		<!-- Tilmeldingsformular til Nyhedsbrev   -->
 
 		<div class="nyhedsbrev">
-			<a>nyhedsbrevet</a>
+
+			<!-- Knap til at åbne modal vindue/tilmeldings formular-->
+
+			<button id="tilmeld">
+                <p>Tilmeld dig mit nyhedsbrev!</p>
+            </button>
+
+			<!-- html for modal   -->
+			<section id="modal">
+				<!-- lukke knap  -->
+				<button id="close">Luk</button>
+				<!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
+				<div id="modal-content">
+					<form>
+						<h1>Tilmeld dig mit nyhedsbrev!</h1>
+						<br>
+						<p> Bliv informeret om kommende udstillinger og nyheder, hurtigt og nemt. </p>
+						<br>
+						<input id="navn" type="text" placeholder="Dit navn" required>
+						<input id="email" type="email" placeholder="Din email" required><br>
+						<label>
+                            <input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Charlotte Nielsen Keramik Nyhedsbrev </label>
+						<p>Ved at klikke ja erklære du dig enig med vilkår og betingelser og den tilhørende persondatapolitik. <a href="https://www.datatilsynet.dk/generelt-om-databeskyttelse/lovgivning/"> læs mere her</a> </p>
+						<input type="submit" value="send"> <span id="response"> </span> <br>
+
+					</form>
+				</div>
+			</section>
 		</div>
-
-
 
 	</footer>
 

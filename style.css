@@ -551,6 +551,11 @@ article {
 
 /*Aktuelt*/
 
+.akt_container {
+	width: 80vw;
+	margin: auto;
+}
+
 .akt_overskrift {
 	text-align: center;
 	font-size: 2em;
@@ -560,19 +565,33 @@ article {
 }
 
 .akt_img {
-	width: 15vw;
-	height: 15vw;
+	width: 70vw;
+	height: 60vw;
+	margin-top: 10vw;
+
 }
 
-.akt_event1 {}
+.akt_besk {
+	font-size: 1.8em;
+}
 
-.akt_besk {}
+#imgCont {
+	width: 80vw;
+	text-align: center;
+}
 
-.akt_titel {}
+.akt_titel {
+	font-size: 2.2em;
+}
 
-.event_img1 {}
+.akt_link {
+	font-size: 3em;
+	color: red;
+	text-decoration: none;
 
-.knap-event1 {}
+}
+
+
 
 @media screen and (min-width: 700px) {
 	.akt_container {

@@ -279,6 +279,14 @@ footer {
 	display: none;
 }
 
+#infoGrafikTxT {
+	width: 100vw;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	position: absolute;
+	transform: translatey(-6vw);
+}
+
 
 /*--------------------------------------------------------*/
 
