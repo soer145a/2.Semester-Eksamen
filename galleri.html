@@ -40,7 +40,7 @@
 
         <div class="logo">
             <a href="forside.html">
-                <img src="pics/logo.png">
+                <img src="pics/logo.png" alt="CN logo">
             </a>
         </div>
 
@@ -101,11 +101,11 @@
 
         <div class="some_img">
             <a href="https://www.facebook.com/cn.keramik.dk/">
-                <img src="pics/fb.png">
+                <img src="pics/fb.png" alt="fb ikon">
             </a>
 
             <a href="https://www.instagram.com/charlottenielsenkeramik/">
-                <img src="pics/insta.png">
+                <img src="pics/insta.png" alt="insta ikon">
             </a>
         </div>
 
@@ -151,81 +151,81 @@
 <!--her hentes json fil ind via wordpress -->
 
 <script>
-document.addEventListener("DOMContentLoaded", getJSON);
+    document.addEventListener("DOMContentLoaded", getJSON);
 
-let dest = document.querySelector(".container");
-let imgJSON;
-let billede;
-let id;
-let postTemplate = document.querySelector("[data-template]");
-
-
-
-async function getJSON() {
-    myJSON = await fetch("https://www.soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/image?per_page=100");
-    imgJSON = await myJSON.json();
-    console.log(imgJSON);
-    visImg();
-
-}
-
-function visImg() {
-    console.log("vis billeder");
-    imgJSON.forEach(billede => {
-            let klon = postTemplate.cloneNode(true).content;
-
-            klon.querySelector("article").addEventListener("click", () => {
-                visModal(billede);
-                console.log("Klik på Billede");
-
-            });
-            klon.querySelector(".gal_img").innerHTML = billede.content.rendered;
-
-
-            dest.appendChild(klon);
-        }
-
-
-    );
-
-}
-
-function visModal(billede) {
-    console.log("Åbner Modal");
-    console.log(billede);
-
-    document.querySelector("#gal_modal_fullscreen").style.display = "block";
-    document.querySelector("#gal_modal_vindue").style.pointerEvents = "all";
-    document.querySelector("#gal_modal_button").style.pointerEvents = "all";
+    let dest = document.querySelector(".container");
+    let imgJSON;
+    let billede;
+    let id;
+    let postTemplate = document.querySelector("[data-template]");
 
 
 
-    document.querySelector("#gal_modal_content").innerHTML = billede.content.rendered;
+    async function getJSON() {
+        myJSON = await fetch("https://www.soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/image?per_page=100");
+        imgJSON = await myJSON.json();
+        console.log(imgJSON);
+        visImg();
 
-    document.querySelector("#gal_modal_button").addEventListener("click", () => {
-        document.querySelector("#gal_modal_fullscreen").style.display = "none";
-    });
-
-
-
-}
-
-function onLoad() {
-
-    // if (window.innerWidth <= 768) {
-
-    function toggleMenu() {
-        document.querySelector(".burger").classList.toggle("change");
-        document.querySelector("nav").classList.toggle("show");
     }
-    document.querySelector(".burger").addEventListener("click", toggleMenu);
-    document.querySelector("ul").addEventListener("click", toggleMenu);
 
-}
-//}
+    function visImg() {
+        console.log("vis billeder");
+        imgJSON.forEach(billede => {
+                let klon = postTemplate.cloneNode(true).content;
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    onLoad();
-});
+                klon.querySelector("article").addEventListener("click", () => {
+                    visModal(billede);
+                    console.log("Klik på Billede");
+
+                });
+                klon.querySelector(".gal_img").innerHTML = billede.content.rendered;
+
+
+                dest.appendChild(klon);
+            }
+
+
+        );
+
+    }
+
+    function visModal(billede) {
+        console.log("Åbner Modal");
+        console.log(billede);
+
+        document.querySelector("#gal_modal_fullscreen").style.display = "block";
+        document.querySelector("#gal_modal_vindue").style.pointerEvents = "all";
+        document.querySelector("#gal_modal_button").style.pointerEvents = "all";
+
+
+
+        document.querySelector("#gal_modal_content").innerHTML = billede.content.rendered;
+
+        document.querySelector("#gal_modal_button").addEventListener("click", () => {
+            document.querySelector("#gal_modal_fullscreen").style.display = "none";
+        });
+
+
+
+    }
+
+    function onLoad() {
+
+        // if (window.innerWidth <= 768) {
+
+        function toggleMenu() {
+            document.querySelector(".burger").classList.toggle("change");
+            document.querySelector("nav").classList.toggle("show");
+        }
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+        document.querySelector("ul").addEventListener("click", toggleMenu);
+
+    }
+    //}
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        onLoad();
+    });
 
 </script>
