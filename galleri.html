@@ -194,16 +194,16 @@ function visModal(billede) {
     console.log("Åbner Modal");
     console.log(billede);
 
-    document.querySelector("#modal_fullscreen").style.display = "block";
-    document.querySelector("#modal_vindue").style.pointerEvents = "all";
-    document.querySelector("#modal_button").style.pointerEvents = "all";
+    document.querySelector("#gal_modal_fullscreen").style.display = "block";
+    document.querySelector("#gal_modal_vindue").style.pointerEvents = "all";
+    document.querySelector("#gal_modal_button").style.pointerEvents = "all";
 
 
 
-    document.querySelector("#modal_content").innerHTML = billede.content.rendered;
+    document.querySelector("#gal_modal_content").innerHTML = billede.content.rendered;
 
-    document.querySelector("#modal_button").addEventListener("click", () => {
-        document.querySelector("#modal_fullscreen").style.display = "none";
+    document.querySelector("#gal_modal_button").addEventListener("click", () => {
+        document.querySelector("#gal_modal_fullscreen").style.display = "none";
     });
 
 
