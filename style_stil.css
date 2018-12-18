@@ -556,41 +556,47 @@ footer {
 		#segmentContainer {
 			display: grid;
 			grid-template-rows: 1fr 1fr;
-			width: 80vw;
+			width: 100vw;
 			margin: auto;
 
 		}
 		#billede2 img {
 			width: 30vw;
+			margin: auto;
 		}
 
 		#billede2 {
-			text-align: left;
+			text-align: center;
 			width: 30vw;
+			margin: auto;
 		}
 
 		#tekst1 {
-			width: 30vw;
+			width: 60vw;
+			margin-bottom: 5vw;
+			margin: auto;
 		}
 
 		#tekst1 p {
-			width: 30vw;
+			width: 50vw;
 			margin: auto;
 			font-size: 2em;
 			line-height: 1.5;
+			margin-top: auto;
 		}
 
 		#tekst2 {
-			width: 40vw;
+			width: 60vw;
 			margin-bottom: 5vw;
 			margin: auto;
 		}
 
 		#tekst2 p {
-			width: 30vw;
+			width: 50vw;
 			margin: auto;
 			font-size: 2em;
 			line-height: 1.5;
+			margin-top: auto;
 		}
 
 		#YTV {
@@ -637,11 +643,15 @@ footer {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			width: 100vw;
+			margin-top: 2vw;
 		}
 
 		.stil_bottom h2 {
 			text-align: center;
 			font-size: 2em;
+		}
+		.stil_bottom {
+			margin-top: 5vw;
 		}
 		#segment1 {
 			display: grid;
