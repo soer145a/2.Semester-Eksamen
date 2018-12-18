@@ -25,6 +25,7 @@ h1 {
     font-family: 'Kanit', sans-serif;
     text-align: center;
     color: black;
+    font-size: 1.9em;
 
 
 }
@@ -463,25 +464,42 @@ article {
 }
 
 #om p {
-    margin: 0.7vw;
+    margin: 0.9vw;
+    font-size: 1.2em;
 }
 
 #om h2 {
     text-align: center;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.7em;
 }
 
-#cv .top h1 {
-    width: 100vw;
-    text-align: center;
-    left: 0;
+#udstillinger {
+    margin: 6vw;
 }
 
 /*parameter for desktop visning af CV*/
 
-@media screen and (min-width: 1080px) {
-    #ombillede img {
+@media screen and (min-width: 768px) {
+
+
+    #om p {
+        margin: 0.7vw;
+    }
+
+    #om h2 {
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+    }
+
+    #cv .top h1 {
+        width: 100vw;
+        text-align: center;
+        left: 0;
+    }
+
+    # #ombillede img {
         width: 15vw;
 
     }
