@@ -25,16 +25,18 @@ h1 {
     font-family: 'Kanit', sans-serif;
     text-align: center;
     color: black;
-    font-size: ;
+    font-size: 4em;
 }
 
 h2 {
     font-family: 'Teko', sans-serif;
+    font-size: 1em;
 }
 
 p {
     font-family: 'PT Sans Narrow', sans-serif;
     line-height: normal;
+    font-size: em;
 }
 
 header {
@@ -314,6 +316,7 @@ nav a:hover {
 
 #om h2 {
     text-align: center;
+    color: white;
 }
 
 #udstillinger {
@@ -335,7 +338,7 @@ nav a:hover {
     }
 
     #om {
-        width: 20vw !important;
+        width: 35vw !important;
         margin: 0;
     }
 
@@ -353,10 +356,6 @@ nav a:hover {
 
     .container {
         margin-top: 5vw;
-    }
-
-    #line {
-        width: 30vw;
     }
 
     .cv_titel {
