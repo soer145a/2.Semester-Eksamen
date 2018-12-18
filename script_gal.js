@@ -22,7 +22,7 @@ function visImg() {
 			let klon = postTemplate.cloneNode(true).content;
 
 			klon.querySelector("article").addEventListener("click", () => {
-				visModal(billede);
+				GalvisModal(billede);
 				console.log("Klik på Billede");
 
 			});
@@ -37,20 +37,20 @@ function visImg() {
 
 }
 
-function visModal(billede) {
+function GalvisModal(billede) {
 	console.log("Åbner Modal");
 	console.log(billede);
 
-	document.querySelector("#modal_fullscreen").style.display = "block";
-	document.querySelector("#modal_vindue").style.pointerEvents = "all";
-	document.querySelector("#modal_button").style.pointerEvents = "all";
+	document.querySelector("#gal_modal_fullscreen").style.display = "block";
+	document.querySelector("#gal_modal_vindue").style.pointerEvents = "all";
+	document.querySelector("#gal_modal_button").style.pointerEvents = "all";
 
 
 
-	document.querySelector("#modal_content").innerHTML = billede.content.rendered;
+	document.querySelector("#gal_modal_content").innerHTML = billede.content.rendered;
 
-	document.querySelector("#modal_button").addEventListener("click", () => {
-		document.querySelector("#modal_fullscreen").style.display = "none";
+	document.querySelector("#gal_modal_button").addEventListener("click", () => {
+		document.querySelector("#gal_modal_fullscreen").style.display = "none";
 	});
 
 
@@ -74,3 +74,46 @@ function onLoad() {
 document.addEventListener("DOMContentLoaded", function (event) {
 	onLoad();
 });
+
+// Script til Nyhedsbreve:
+
+let modal = document.querySelector("#modal");
+let tilmeld = document.querySelector("#tilmeld");
+let close = document.querySelector("#close");
+
+//kode til at svar teksten bliver vist
+let svartekst = "";
+document.querySelector("submit").addEventListener("submit", ajaxCall);
+
+//kode
+async function ajaxCall(e) {
+	e.preventDefault();
+	let navn = this.querySelector("input[type=text]").value;
+	console.log(navn);
+	let url = "nyhedsbrev.php?navn=" + navn;
+	let svar = await fetch(url);
+	svartekst = await svar.text();
+	show();
+	this.querySelector("input[type=text]").value = "";
+}
+
+function show(response) {
+	document.querySelector("#response").textContent = svartekst;
+}
+
+tilmeld.addEventListener("click", visModal);
+
+function visModal() {
+
+	//ved klik på tilmeldingsboxen vises modal vindu med indhold.
+	modal.classList.add("vis");
+
+	//ved klik på close button fjernes modal vinduet med indholdet.
+	close.addEventListener("click", skjulModal);
+
+}
+
+function skjulModal() {
+	//css med modal vis bliver skjult igen
+	modal.classList.remove("vis");
+}
