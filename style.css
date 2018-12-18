@@ -597,6 +597,64 @@ article {
 
 }
 
+@media screen and (min-width: 1000px) {
+	#kont_grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#maps {
+		width: 50vw;
+		height: 31vw;
+		margin: 1.2vw;
+
+	}
+	#kontaktInfo {
+		width: 40vw;
+	}
+
+	#kont_name {
+		width: 40vw;
+		font-size: 4em;
+		margin: 2vw;
+	}
+
+	#kont_adrs {
+		width: 40vw;
+		font-size: 2em;
+		margin: 1vw;
+		margin-left: 2vw;
+	}
+
+	#kont_pstnmr {
+		width: 40vw;
+		font-size: 2em;
+		margin: 1vw;
+		margin-left: 2vw;
+	}
+
+	#kont_tlf {
+		width: 40vw;
+		font-size: 2em;
+		margin: 1vw;
+		margin-left: 2vw;
+	}
+
+	#kont_mail {
+		width: 40vw;
+		font-size: 2em;
+		margin: 1vw;
+		margin-left: 2vw;
+	}
+
+	#kont_xtra p {
+		width: 40vw;
+		font-size: 2em;
+		margin: 1vw;
+		margin-left: 2vw;
+	}
+
+}
+
 /*--------------------------------------------------------*/
 
 /*Footer*/
