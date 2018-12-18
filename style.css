@@ -329,7 +329,9 @@ article {
 
 }
 
-#modal_button {
+
+
+#gal_modal_button {
     pointer-events: none;
     display: none;
 }
@@ -551,6 +553,15 @@ article {
 
 /*Aktuelt*/
 
+.akt_container {
+    width: 80vw;
+    margin: auto;
+}
+
+article {
+    margin-bottom: 5vw;
+}
+
 .akt_overskrift {
     text-align: center;
     font-size: 2em;
@@ -560,28 +571,94 @@ article {
 }
 
 .akt_img {
-    width: 15vw;
-    height: 15vw;
+
+    height: 60vw;
+    margin-top: 10vw;
+
+
+
 }
 
-.akt_event1 {}
+.akt_besk {
+    font-size: 1.8em;
+}
 
-.akt_besk {}
+#imgCont {
+    width: 80vw;
+    text-align: center;
+    margin-bottom: 5vw;
+}
 
-.akt_titel {}
+.akt_titel {
+    font-size: 2.2em;
+    margin-bottom: 5vw;
+}
 
-.event_img1 {}
+.akt_link {
+    font-size: 2em;
+    color: red;
+    text-decoration: none;
 
-.knap-event1 {}
+}
+
+
 
 @media screen and (min-width: 700px) {
+
+
     .akt_container {
+        width: 80vw;
+        margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width: 100vw;
-        grid-gap: 2vw;
     }
 
+    .akt_overskrift {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+
+    .akt_img {
+
+        width: 20vw;
+        height: 12vw;
+        margin-top: 2vw;
+
+
+    }
+
+    .akt_besk {
+        font-size: 1.8em;
+        margin-right: 2vw;
+    }
+
+    #imgCont {
+        width: 30vw;
+        text-align: left;
+        margin-bottom: 1vw;
+        ;
+    }
+
+    .akt_titel {
+        font-size: 3em;
+        margin-bottom: 2vw;
+    }
+
+    .akt_link {
+        font-size: 2.5em;
+        color: var(--sorceres);
+        text-decoration: none;
+
+
+    }
+
+    .akt_link:hover {
+        color: black;
+        text-decoration: underline;
+
+    }
 }
 
 
@@ -593,41 +670,43 @@ article {
 
 #kontaktInfo {
     width: 100vw;
+    margin-top: 4vw;
 }
 
 #kont_name {
     width: 80vw;
-    font-size: 2em;
+    font-size: 1.9em;
     margin: 3vw;
+    margin-bottom: 5vw;
 }
 
 #kont_adrs {
     width: 80vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3vw;
 }
 
 #kont_pstnmr {
     width: 80vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3vw;
 }
 
 #kont_tlf {
     width: 80vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3vw;
 }
 
 #kont_mail {
     width: 100vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3vw;
 }
 
 #kont_xtra p {
     width: 100vw;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 3vw;
 }
 
@@ -656,100 +735,58 @@ article {
 
     #kont_name {
         width: 40vw;
-        font-size: 4em;
+        font-size: 3em;
         margin: 2vw;
     }
 
     #kont_adrs {
         width: 40vw;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 1vw;
         margin-left: 2vw;
     }
 
     #kont_pstnmr {
         width: 40vw;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 1vw;
         margin-left: 2vw;
     }
 
     #kont_tlf {
         width: 40vw;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 1vw;
         margin-left: 2vw;
     }
 
     #kont_mail {
         width: 40vw;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 1vw;
         margin-left: 2vw;
     }
 
     #kont_xtra p {
         width: 40vw;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 1vw;
         margin-left: 2vw;
     }
 
-}
-
-/*--------------------------------------------------------*/
-
-/*Footer*/
-
-footer {
-    width: 100vw;
-    position: absolute;
-    background: var(--french);
-    display: flex;
-    flex-wrap: nowrap;
-
-}
-
-.adresse {
-    flex-grow: 1;
-    flex-basis: 100px;
-    padding-left: 50px;
-    margin-top: 5px;
-
-}
-
-.adresse a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--stoney);
-}
-
-/*hover på mail linket*/
-
-.adresse a:hover {
-    color: black;
-}
 
 
+    /*--------------------------------------------------------*/
 
-/*visning af hele FOOTER ved Mobil visning*/
+    /*Footer*/
 
-@media screen and (max-width: 700px) {
-    .some_img {
-        flex-grow: 1;
-        flex-basis: 100px;
-        padding-top: 1.5vw;
-        padding-left: 15vw;
-    }
+    footer {
+        width: 100vw;
+        position: absolute;
+        background: var(--french);
+        display: flex;
+        flex-wrap: nowrap;
 
-    .some_img img {
-        width: 8vw;
-        margin: 2vw;
-
-    }
-
-    .some_img a {
-        text-decoration: none;
     }
 
     .adresse {
@@ -760,235 +797,277 @@ footer {
 
     }
 
-}
-
-/*visning af hele FOOTER ved Tablet visning*/
-
-@media screen and (min-width: 700px) {
-    .some_img img:hover {
-        transform: scale(0.9);
-    }
-
-    .some_img {
-        flex-grow: 1;
-        flex-basis: 100px;
-        padding-top: 1vw;
-        padding-left: 0vw;
-    }
-
-    .some_img img {
-        width: 5.5vw;
-        margin: 1.5vw;
-
-    }
-
-    .some_img a {
+    .adresse a {
         text-decoration: none;
+        font-weight: bold;
+        color: var(--stoney);
     }
 
-    .adresse {
-        flex-grow: 1;
-        flex-basis: 100px;
-        padding-left: 50px;
-        margin-top: 5px;
+    /*hover på mail linket*/
 
-    }
-}
-
-/*visning af hele FOOTER ved Desktop visning*/
-
-@media screen and (min-width: 900px) {
-    .some_img img:hover {
-        transform: scale(0.9);
+    .adresse a:hover {
+        color: black;
     }
 
-    .some_img {
-        flex-grow: 1;
-        flex-basis: 100px;
-        padding-top: 1.5vw;
-        padding-left: 0vw;
+
+
+    /*visning af hele FOOTER ved Mobil visning*/
+
+    @media screen and (max-width: 700px) {
+        .some_img {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-top: 1.5vw;
+            padding-left: 15vw;
+        }
+
+        .some_img img {
+            width: 8vw;
+            margin: 2vw;
+
+        }
+
+        .some_img a {
+            text-decoration: none;
+        }
+
+        .adresse {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-left: 50px;
+            margin-top: 5px;
+
+        }
+
     }
 
-    .some_img img {
-        width: 4vw;
-        margin: 1vw;
+    /*visning af hele FOOTER ved Tablet visning*/
+
+    @media screen and (min-width: 700px) {
+        .some_img img:hover {
+            transform: scale(0.9);
+        }
+
+        .some_img {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-top: 1vw;
+            padding-left: 0vw;
+        }
+
+        .some_img img {
+            width: 5.5vw;
+            margin: 1.5vw;
+
+        }
+
+        .some_img a {
+            text-decoration: none;
+        }
+
+        .adresse {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-left: 50px;
+            margin-top: 5px;
+
+        }
+    }
+
+    /*visning af hele FOOTER ved Desktop visning*/
+
+    @media screen and (min-width: 900px) {
+        .some_img img:hover {
+            transform: scale(0.9);
+        }
+
+        .some_img {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-top: 1.5vw;
+            padding-left: 0vw;
+        }
+
+        .some_img img {
+            width: 4vw;
+            margin: 1vw;
+
+        }
+
+        .some_img a {
+            text-decoration: none;
+        }
+
+        .adresse {
+            flex-grow: 1;
+            flex-basis: 100px;
+            padding-left: 50px;
+            margin-top: 10px;
+
+        }
+
+        .adresse {
+            font-size: 1.4em;
+        }
 
     }
 
-    .some_img a {
+    /*--------------------------------------------------------*/
+
+    /* Nyhedsbrev/ tilmeldings blanket*/
+
+    #tilmeld {
+        background-color: var(--french);
+        width: 20vh;
+        height: 11vh;
+        border-radius: 3.5px;
+        border-width: 0.5px;
+        border-color: #DBDEDE;
+        text-align: center;
+        position: relative;
+        margin-top: 15px;
+        margin-right: 50px;
+        border-style: solid;
+        border-color: white;
+    }
+
+    #tilmeld p {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    /* css der bliver kaldt nede i javascript´en der gør at modal vinduet bliver åbnet*/
+
+    #modal.vis {
+        opacity: 4;
+        pointer-events: all;
+    }
+
+    /* css til luk knappen*/
+
+    #close {
+        height: 20px;
+        width: 50px;
+        border-radius: 3.5px;
+        border: none;
+        background-color: var(--sorceres);
+        color: var(--stoney);
+        margin: 3px;
+    }
+
+    /* css til luk knappens hover*/
+
+    #close:hover,
+    #close:focus {
+        color: rgb(127, 157, 174);
         text-decoration: none;
+        cursor: pointer;
+        margin: 5px;
     }
 
-    .adresse {
-        flex-grow: 1;
-        flex-basis: 100px;
-        padding-left: 50px;
-        margin-top: 10px;
 
-    }
+    /* css til modal vinduet*/
 
-    .adresse {
-        font-size: 1.4em;
-    }
-
-}
-
-/*--------------------------------------------------------*/
-
-/* Nyhedsbrev/ tilmeldings blanket*/
-
-#tilmeld {
-    background-color: var(--french);
-    width: 20vh;
-    height: 11vh;
-    border-radius: 3.5px;
-    border-width: 0.5px;
-    border-color: #DBDEDE;
-    text-align: center;
-    position: relative;
-    margin-top: 15px;
-    margin-right: 50px;
-    border-style: solid;
-    border-color: white;
-}
-
-#tilmeld p {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-/* css der bliver kaldt nede i javascript´en der gør at modal vinduet bliver åbnet*/
-
-#modal.vis {
-    opacity: 4;
-    pointer-events: all;
-}
-
-/* css til luk knappen*/
-
-#close {
-    height: 20px;
-    width: 50px;
-    border-radius: 3.5px;
-    border: none;
-    background-color: var(--sorceres);
-    color: var(--stoney);
-    margin: 3px;
-}
-
-/* css til luk knappens hover*/
-
-#close:hover,
-#close:focus {
-    color: rgb(127, 157, 174);
-    text-decoration: none;
-    cursor: pointer;
-    margin: 5px;
-}
-
-
-/* css til modal vinduet*/
-
-#modal {
-    background-color: rgba(127, 157, 174, 0.79);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 1s;
-    position: fixed;
-    /*display: none;*/
-}
-
-/* css til model content*/
-
-#modal-content {
-    margin: 5px;
-}
-
-#modal-content form {
-    font-size: 150%;
-}
-
-#modal-content label {
-    font-family: 'PT Sans Narrow', sans-serif;
-
-}
-
-/* css til submit knappen */
-
-input[type=submit] {
-    width: 50px;
-    height: 25px;
-    background-color: var(--sorceres);
-    color: var(--stoney);
-    font-size: 15px;
-    text-align: center;
-    margin: 5px;
-    border-radius: 3.5px;
-    float: right;
-}
-
-/* css til email feltet*/
-
-input[type=email]:hover {
-    background-color: rgba(219, 222, 222, 0.31);
-    border-radius: 3.5px;
-}
-
-/* css til navne feltet*/
-
-input[type=text]:hover {
-
-    background-color: rgba(219, 222, 222, 0.31);
-    border-radius: 3.5px;
-}
-
-/* css til erklæring feltet*/
-
-input[type=checkbox] {
-
-    background-color: rgba(219, 222, 222, 0.31);
-
-    margin: 5px;
-
-
-}
-
-/* css til de overordnede input i nyhedsbrev*/
-
-input {
-    border-radius: 3.5px;
-    margin: 5px;
-}
-
-
-/* media screen til at hide hele nyhedsbrevet når det er på mobilvisning*/
-
-@media screen and (max-width: 700px) {
-    .nyhedsbrev {
-        display: none;
-    }
-}
-
-/* media screen til blankettens placering ved tablet visning*/
-
-@media screen and (min-width: 700px) {
     #modal {
-        width: 40vw;
-        height: 35vw;
-        right: 0vw;
-        bottom: 0vw;
-    }
-}
-
-/* media screen hvor blanketten er placering ved desktop visning*/
-
-@media screen and (min-width: 1080px) {
-    #modal {
-        width: 30vw;
-        height: 35vw;
-        right: 0vw;
-        bottom: 0vw;
+        background-color: rgba(127, 157, 174, 0.79);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+        position: fixed;
+        /*display: none;*/
     }
 
-}
+    /* css til model content*/
+
+    #modal-content {
+        margin: 5px;
+    }
+
+    #modal-content form {
+        font-size: 150%;
+    }
+
+    #modal-content label {
+        font-family: 'PT Sans Narrow', sans-serif;
+
+    }
+
+    /* css til submit knappen */
+
+    input[type=submit] {
+        width: 50px;
+        height: 25px;
+        background-color: var(--sorceres);
+        color: var(--stoney);
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+        border-radius: 3.5px;
+        float: right;
+    }
+
+    /* css til email feltet*/
+
+    input[type=email]:hover {
+        background-color: rgba(219, 222, 222, 0.31);
+        border-radius: 3.5px;
+    }
+
+    /* css til navne feltet*/
+
+    input[type=text]:hover {
+
+        background-color: rgba(219, 222, 222, 0.31);
+        border-radius: 3.5px;
+    }
+
+    /* css til erklæring feltet*/
+
+    input[type=checkbox] {
+
+        background-color: rgba(219, 222, 222, 0.31);
+
+        margin: 5px;
+
+
+    }
+
+    /* css til de overordnede input i nyhedsbrev*/
+
+    input {
+        border-radius: 3.5px;
+        margin: 5px;
+    }
+
+
+    /* media screen til at hide hele nyhedsbrevet når det er på mobilvisning*/
+
+    @media screen and (max-width: 700px) {
+        .nyhedsbrev {
+            display: none;
+        }
+    }
+
+    /* media screen til blankettens placering ved tablet visning*/
+
+    @media screen and (min-width: 700px) {
+        #modal {
+            width: 40vw;
+            height: 35vw;
+            right: 0vw;
+            bottom: 0vw;
+        }
+    }
+
+    /* media screen hvor blanketten er placering ved desktop visning*/
+
+    @media screen and (min-width: 1080px) {
+        #modal {
+            width: 30vw;
+            height: 35vw;
+            right: 0vw;
+            bottom: 0vw;
+        }
+
+    }
