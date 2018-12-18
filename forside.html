@@ -11,6 +11,9 @@
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Kanit|PT+Sans+Narrow|Teko" rel="stylesheet">
     <link rel="icon" href="" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+
 
     <!-- faviconer   -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
@@ -190,7 +193,7 @@
             document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
             document.querySelector("[data-img1]").setAttribute("src", tag.acf.splashbillede);
             document.querySelector("[data-forsideh2]").textContent = tag.acf.sideoverskrift;
-            document.querySelector("[data-desc]").textContent = tag.acf.beskrivendetekst;
+            document.querySelector("[data-desc]").innerHTML = tag.acf.beskrivendetekst;
             document.querySelector("[data-img2]").setAttribute("src", tag.acf.portrait);
             document.querySelector("[data-sign]").setAttribute("src", tag.acf.signatur);
 
