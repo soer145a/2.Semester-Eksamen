@@ -119,9 +119,16 @@
 				<div id="streg">
 					<img src="pics/streg.png" alt="linie" id="line">
 				</div>
+				<div id="infoGrafikTxT">
+					<p id="1">Trin 1</p>
+					<p id="2">Trin 2</p>
+					<p id="3">Trin 3</p>
+					<p id="4">Trin 4</p>
+				</div>
 
 
 			</div>
+
 		</div>
 
 
@@ -257,19 +264,32 @@
 	function visinfo1() {
 		console.log("vis info 1");
 		document.querySelector("#grafik1").classList.toggle("show");
+		document.querySelector("#grafik2").classList.remove("show");
+
+		document.querySelector("#grafik3").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
 
 	}
 	function visinfo2() {
 		console.log("vis info 2");
 		document.querySelector("#grafik2").classList.toggle("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik3").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
 	}
 	function visinfo3() {
 		console.log("vis info 3");
 		document.querySelector("#grafik3").classList.toggle("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik2").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
 	}
 	function visinfo4() {
 		console.log("vis info 4");
 		document.querySelector("#grafik4").classList.toggle("show");
+		document.querySelector("#grafik2").classList.remove("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik3").classList.remove("show");
 	}
 
 	let modal = document.querySelector("#modal");
