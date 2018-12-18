@@ -363,8 +363,6 @@ article {
     #gal_infotxt {
         background-color: var(--stoney);
         width: 80vw;
-        margin-left: 10vw;
-        margin-right: 10vw;
         font-size: 2.5em;
         letter-spacing: 0px;
         font-family: 'PT Sans Narrow', sans-serif;
@@ -375,7 +373,10 @@ article {
     }
 
 
-    #info1 {}
+    #info1 {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
 
     article {
         pointer-events: all;
