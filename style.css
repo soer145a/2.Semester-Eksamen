@@ -327,15 +327,10 @@ article {
 
 }
 
-<<<<<<< HEAD
-#modal_button {
+
+#gal_modal_button {
     pointer-events: none;
     display: none;
-=======
-#gal_modal_button {
-	pointer-events: none;
-	display: none;
->>>>>>> origin/master
 }
 
 /* visning af GALLERI i desktop visning*/
