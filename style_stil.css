@@ -654,10 +654,22 @@ footer {
 		#infografik {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-			position: absolute;
 			width: 100vw;
-			top: 78vw;
-			right: 0;
+			z-index: 1;
+			position: relative;
+		}
+		#line {
+			display: block;
+			width: 100vw;
+
+		}
+		#infografikContainer {
+			margin-top: 5vw;
+		}
+		#streg {
+			display: block !important;
+			position: relative;
+			transform: translateY(-8vw);
 		}
 		.infografImg {
 			margin: auto;
@@ -675,16 +687,13 @@ footer {
 			font-size: 2em;
 			display: block;
 		}
-		#streg img {
-			width: 100vw;
-		}
-		#streg {
-			margin-bottom: 5vw;
-			margin-top: 2vw;
-			display: block;
-		}
 		#lidtned {
 			padding-top: 1.5vw;
+		}
+
+		#style_gridContainer {
+			display: block;
+
 		}
 
 		/*--------------------------------------------------------*/

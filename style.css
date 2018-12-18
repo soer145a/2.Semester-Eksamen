@@ -25,16 +25,19 @@ h1 {
     font-family: 'Kanit', sans-serif;
     text-align: center;
     color: black;
-    font-size:
+    font-size: 4em;
+
 }
 
 h2 {
     font-family: 'Teko', sans-serif;
+    font-size: 1em;
 }
 
 p {
     font-family: 'PT Sans Narrow', sans-serif;
     line-height: normal;
+    font-size: 0.9em;
 }
 
 header {
@@ -139,6 +142,7 @@ nav a {
 }
 
 /*hover effekt på dropdown menuen i mobilvisningen*/
+
 nav a:hover {
     color: var(--stoney);
 }
@@ -311,17 +315,20 @@ nav a:hover {
 }
 
 #om p {
-    margin: 2vw;
+    margin: 0.7vw;
 }
 
 #om h2 {
     text-align: center;
+    color: white;
+    font-size: 1.2em;
 }
 
-#udstillinger {
-    margin: 3vw;
+#cv .top h1 {
+    width: 100vw;
+    text-align: center;
+    left: 0;
 }
-
 
 /*parameter for desktop visning af CV*/
 
@@ -337,7 +344,7 @@ nav a:hover {
     }
 
     #om {
-        width: 20vw !important;
+        width: 35vw !important;
         margin: 0;
     }
 
@@ -348,17 +355,13 @@ nav a:hover {
     #headline {
         text-align: center;
         position: absolute;
-        top: 11vw;
+        top: 15.5vw;
         right: 35vw;
         font-size: 3em;
     }
 
     .container {
         margin-top: 5vw;
-    }
-
-    #line {
-        width: 30vw;
     }
 
     .cv_titel {
@@ -371,6 +374,10 @@ nav a:hover {
 
     #omTxT {
         font-size: 2em;
+    }
+
+    #udstillinger {
+        margin-top: 6vw;
     }
 }
 
@@ -403,6 +410,7 @@ footer {
 }
 
 /*hover på mail linket*/
+
 .adresse a:hover {
     color: black;
 }
