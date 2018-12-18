@@ -78,15 +78,49 @@
 			</p>
 		</div>
 
-		<div class="some">
-			<img src="pics/fb.png">
-			<img src="pics/insta.png">
+
+		<div class="some_img">
+			<a href="https://www.facebook.com/cn.keramik.dk/">
+                <img src="pics/fb.png">
+            </a>
+
+			<a href="https://www.instagram.com/charlottenielsenkeramik/">
+                <img src="pics/insta.png">
+            </a>
 		</div>
+
+		<!-- Tilmeldingsformular til Nyhedsbrev   -->
 
 		<div class="nyhedsbrev">
-			<a>nyhedsbrevet</a>
-		</div>
 
+			<!-- Knap til at åbne modal vindue/tilmeldings formular-->
+
+			<button id="tilmeld">
+                <p>Tilmeld dig mit nyhedsbrev!</p>
+            </button>
+
+			<!-- html for modal   -->
+			<section id="modal">
+				<!-- lukke knap  -->
+				<button id="close">Luk</button>
+				<!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
+				<div id="modal-content">
+					<form>
+						<h1>Tilmeld dig mit nyhedsbrev!</h1>
+						<br>
+						<p> Bliv informeret om kommende udstillinger og nyheder, hurtigt og nemt. </p>
+						<br>
+						<input id="navn" type="text" placeholder="Dit navn" required>
+						<input id="email" type="email" placeholder="Din email" required><br>
+						<label>
+                            <input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Charlotte Nielsen Keramik Nyhedsbrev </label>
+						<p>Ved at klikke ja erklære du dig enig med vilkår og betingelser og den tilhørende persondatapolitik. <a href="https://www.datatilsynet.dk/generelt-om-databeskyttelse/lovgivning/"> læs mere her</a> </p>
+						<input type="submit" value="send"> <span id="response"> </span> <br>
+
+					</form>
+				</div>
+			</section>
+		</div>
 
 	</footer>
 
@@ -137,7 +171,7 @@
             document.querySelector("[data-adresse]").textContent = tag.acf.adresse;
             document.querySelector("[data-tlf]").textContent = tag.acf.tlf;
             document.querySelector("[data-email]").textContent = tag.acf.email;
-            document.querySelector("[data-ekstra]").textContent = tag.acf.ekstra;
+            document.querySelector("[data-ekstra]").innerHTML = tag.acf.ekstra;
             document.querySelector("[data-postnmr]").textContent = tag.acf.postnmr;
 
 
