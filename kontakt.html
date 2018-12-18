@@ -59,7 +59,7 @@
 			<p data-adresse id="kont_adrs"></p>
 			<p data-postnmr id="kont_pstnmr"></p>
 			<p id="kont_tlf"> <b>Telefon:</b> <span data-tlf></span></p>
-			<p id="kont_mail"> <b>Email:</b> <span data-email></span></p>
+			<p id="kont_mail"> <b>Email:</b> <a data-email> cn.keramik@gmail.com</a> </p>
 			<p data-ekstra id="kont_xtra"></p>
 		</div>
 
@@ -131,53 +131,53 @@
 </html>
 
 <script>
-    let kontaktJSON;
+	let kontaktJSON;
 
 
-    function onLoad() {
+	function onLoad() {
 
-        // if (window.innerWidth <= 768) {
+		// if (window.innerWidth <= 768) {
 
-        function toggleMenu() {
-            document.querySelector(".burger").classList.toggle("change");
-            document.querySelector("nav").classList.toggle("show");
-        }
-        document.querySelector(".burger").addEventListener("click", toggleMenu);
-        document.querySelector("ul").addEventListener("click", toggleMenu);
+		function toggleMenu() {
+			document.querySelector(".burger").classList.toggle("change");
+			document.querySelector("nav").classList.toggle("show");
+		}
+		document.querySelector(".burger").addEventListener("click", toggleMenu);
+		document.querySelector("ul").addEventListener("click", toggleMenu);
 
-    }
-    //}
+	}
+	//}
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        onLoad();
-        getJSON();
-    });
-
-
-    async function getJSON() {
-        myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/kontakt");
-        /* her sætter jeg mit array som wordpress henter, til at være en json fil */
-        kontaktJSON = await myJSON.json();
-        console.log(kontaktJSON);
-        vispage();
+	document.addEventListener("DOMContentLoaded", function(event) {
+		onLoad();
+		getJSON();
+	});
 
 
-    }
-
-    function vispage() {
-        console.log("vis tekst");
-        kontaktJSON.forEach(tag => {
-            document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
-            document.querySelector("[data-navn]").textContent = tag.acf.navn;
-            document.querySelector("[data-adresse]").textContent = tag.acf.adresse;
-            document.querySelector("[data-tlf]").textContent = tag.acf.tlf;
-            document.querySelector("[data-email]").textContent = tag.acf.email;
-            document.querySelector("[data-ekstra]").innerHTML = tag.acf.ekstra;
-            document.querySelector("[data-postnmr]").textContent = tag.acf.postnmr;
+	async function getJSON() {
+		myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/kontakt");
+		/* her sætter jeg mit array som wordpress henter, til at være en json fil */
+		kontaktJSON = await myJSON.json();
+		console.log(kontaktJSON);
+		vispage();
 
 
+	}
 
-        });
-    }
+	function vispage() {
+		console.log("vis tekst");
+		kontaktJSON.forEach(tag => {
+			document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
+			document.querySelector("[data-navn]").textContent = tag.acf.navn;
+			document.querySelector("[data-adresse]").textContent = tag.acf.adresse;
+			document.querySelector("[data-tlf]").textContent = tag.acf.tlf;
+			document.querySelector("[data-email]").setAttribute = ("href" + "=" + tag.acf.email);
+			document.querySelector("[data-ekstra]").innerHTML = tag.acf.ekstra;
+			document.querySelector("[data-postnmr]").textContent = tag.acf.postnmr;
+
+
+
+		});
+	}
 
 </script>
