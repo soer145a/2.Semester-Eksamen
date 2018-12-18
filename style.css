@@ -557,6 +557,10 @@ article {
 	margin: auto;
 }
 
+article {
+	margin-bottom: 5vw;
+}
+
 .akt_overskrift {
 	text-align: center;
 	font-size: 2em;
@@ -581,14 +585,16 @@ article {
 #imgCont {
 	width: 80vw;
 	text-align: center;
+	margin-bottom: 5vw;
 }
 
 .akt_titel {
 	font-size: 2.2em;
+	margin-bottom: 5vw;
 }
 
 .akt_link {
-	font-size: 3em;
+	font-size: 2em;
 	color: red;
 	text-decoration: none;
 
@@ -598,12 +604,57 @@ article {
 
 @media screen and (min-width: 700px) {
 	.akt_container {
+		width: 80vw;
+		margin: auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		width: 100vw;
-		grid-gap: 2vw;
 	}
 
+	.akt_overskrift {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 2vw;
+		margin-top: 2vw;
+	}
+
+	.akt_img {
+
+		width: 20vw;
+		height: 12vw;
+		margin-top: 2vw;
+
+
+	}
+
+	.akt_besk {
+		font-size: 1.8em;
+		margin-right: 2vw;
+	}
+
+	#imgCont {
+		width: 30vw;
+		text-align: left;
+		margin-bottom: 1vw;
+		;
+	}
+
+	.akt_titel {
+		font-size: 3em;
+		margin-bottom: 2vw;
+	}
+
+	.akt_link {
+		font-size: 2.5em;
+		color: var(--sorceres);
+		text-decoration: none;
+
+
+	}
+	.akt_link:hover {
+		color: black;
+		text-decoration: underline;
+
+	}
 }
 
 
