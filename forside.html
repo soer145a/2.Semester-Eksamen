@@ -34,9 +34,10 @@
 
 		<div class="logo">
 			<a href="forside.html">
-                <img src="pics/logo.png" alt="logo af Charlotte Nielsen">
-            </a>
+				<img src="pics/logo.png" alt="logo af Charlotte Nielsen">
+				</a>
 		</div>
+
 
 		<h1 data-sidenavn></h1>
 
@@ -156,95 +157,95 @@
 <!--Script:  her hentes json fil ind via wordpress-->
 
 <script>
-    let forsideJSON;
+	let forsideJSON;
 
 
-    function onLoad() {
+	function onLoad() {
 
-        // if (window.innerWidth <= 768) {
+		// if (window.innerWidth <= 768) {
 
-        function toggleMenu() {
-            document.querySelector(".burger").classList.toggle("change");
-            document.querySelector("nav").classList.toggle("show");
-        }
-        document.querySelector(".burger").addEventListener("click", toggleMenu);
-        document.querySelector("ul").addEventListener("click", toggleMenu);
+		function toggleMenu() {
+			document.querySelector(".burger").classList.toggle("change");
+			document.querySelector("nav").classList.toggle("show");
+		}
+		document.querySelector(".burger").addEventListener("click", toggleMenu);
+		document.querySelector("ul").addEventListener("click", toggleMenu);
 
-    }
-    //}
+	}
+	//}
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        onLoad();
-        getJSON();
-    });
-
-
-    async function getJSON() {
-        myJSON = await fetch("http://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
-        /* her sætter jeg mit array som wordpress henter, til at være en json fil */
-        forsideJSON = await myJSON.json();
-        console.log(forsideJSON);
-        vispage();
+	document.addEventListener("DOMContentLoaded", function(event) {
+		onLoad();
+		getJSON();
+	});
 
 
-    }
-
-    function vispage() {
-        console.log("vis tekst");
-        forsideJSON.forEach(tag => {
-            document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
-            document.querySelector("[data-img1]").setAttribute("src", tag.acf.splashbillede);
-            document.querySelector("[data-forsideh2]").textContent = tag.acf.sideoverskrift;
-            document.querySelector("[data-desc]").innerHTML = tag.acf.beskrivendetekst;
-            document.querySelector("[data-img2]").setAttribute("src", tag.acf.portrait);
-            document.querySelector("[data-sign]").setAttribute("src", tag.acf.signatur);
+	async function getJSON() {
+		myJSON = await fetch("http://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
+		/* her sætter jeg mit array som wordpress henter, til at være en json fil */
+		forsideJSON = await myJSON.json();
+		console.log(forsideJSON);
+		vispage();
 
 
-        });
-    }
+	}
+
+	function vispage() {
+		console.log("vis tekst");
+		forsideJSON.forEach(tag => {
+			document.querySelector("[data-sidenavn]").textContent = tag.acf.sidenavn;
+			document.querySelector("[data-img1]").setAttribute("src", tag.acf.splashbillede);
+			document.querySelector("[data-forsideh2]").textContent = tag.acf.sideoverskrift;
+			document.querySelector("[data-desc]").innerHTML = tag.acf.beskrivendetekst;
+			document.querySelector("[data-img2]").setAttribute("src", tag.acf.portrait);
+			document.querySelector("[data-sign]").setAttribute("src", tag.acf.signatur);
 
 
-    // Script til Nyhedsbreve:
+		});
+	}
 
-    let modal = document.querySelector("#modal");
-    let tilmeld = document.querySelector("#tilmeld");
-    let close = document.querySelector("#close");
 
-    //kode til at svar teksten bliver vist
-    let svartekst = "";
-    document.querySelector("form").addEventListener("submit", ajaxCall);
+	// Script til Nyhedsbreve:
 
-    //kode
-    async function ajaxCall(e) {
-        e.preventDefault();
-        let navn = this.querySelector("input[type=text]").value;
-        console.log(navn);
-        let url = "nyhedsbrev.php?navn=" + navn;
-        let svar = await fetch(url);
-        svartekst = await svar.text();
-        show();
-        this.querySelector("input[type=text]").value = "";
-    }
+	let modal = document.querySelector("#modal");
+	let tilmeld = document.querySelector("#tilmeld");
+	let close = document.querySelector("#close");
 
-    function show(response) {
-        document.querySelector("#response").textContent = svartekst;
-    }
+	//kode til at svar teksten bliver vist
+	let svartekst = "";
+	document.querySelector("form").addEventListener("submit", ajaxCall);
 
-    tilmeld.addEventListener("click", visModal);
+	//kode
+	async function ajaxCall(e) {
+		e.preventDefault();
+		let navn = this.querySelector("input[type=text]").value;
+		console.log(navn);
+		let url = "nyhedsbrev.php?navn=" + navn;
+		let svar = await fetch(url);
+		svartekst = await svar.text();
+		show();
+		this.querySelector("input[type=text]").value = "";
+	}
 
-    function visModal() {
+	function show(response) {
+		document.querySelector("#response").textContent = svartekst;
+	}
 
-        //ved klik på tilmeldingsboxen vises modal vindu med indhold.
-        modal.classList.add("vis");
+	tilmeld.addEventListener("click", visModal);
 
-        //ved klik på close button fjernes modal vinduet med indholdet.
-        close.addEventListener("click", skjulModal);
+	function visModal() {
 
-    }
+		//ved klik på tilmeldingsboxen vises modal vindu med indhold.
+		modal.classList.add("vis");
 
-    function skjulModal() {
-        //css med modal vis bliver skjult igen
-        modal.classList.remove("vis");
-    }
+		//ved klik på close button fjernes modal vinduet med indholdet.
+		close.addEventListener("click", skjulModal);
+
+	}
+
+	function skjulModal() {
+		//css med modal vis bliver skjult igen
+		modal.classList.remove("vis");
+	}
 
 </script>
