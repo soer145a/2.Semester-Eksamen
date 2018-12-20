@@ -1275,7 +1275,7 @@ footer {
 /* css der bliver kaldt nede i javascript´en der gør at modal vinduet bliver åbnet*/
 
 #modal.vis {
-	opacity: 4;
+	opacity: 1;
 	pointer-events: all;
 }
 
@@ -1305,7 +1305,7 @@ footer {
 /* css til modal vinduet*/
 
 #modal {
-	background-color: rgba(127, 157, 174, 0.79);
+	background-color: rgba(127, 157, 174, 1);
 	opacity: 0;
 	pointer-events: none;
 	transition: all 1s;
@@ -1320,12 +1320,16 @@ footer {
 }
 
 #modal-content form {
-	font-size: 150%;
+	font-size: 2em;
 }
 
 #modal-content label {
 	font-family: 'PT Sans Narrow', sans-serif;
 
+}
+
+form input {
+	font-size: 1em;
 }
 
 /* css til submit knappen */
