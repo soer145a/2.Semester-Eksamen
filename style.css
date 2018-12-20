@@ -128,6 +128,7 @@ li {
 	cursor: pointer;
 	margin-right: 1vw;
 	margin-left: 1vw;
+	font-size: 1.7em;
 }
 
 li a {
@@ -238,7 +239,8 @@ nav a:hover {
 
 #forsideh2 {
 	text-align: center;
-	margin-top: 2vw;
+	margin-top: 5vw;
+	font-size: 3em;
 
 }
 
@@ -516,6 +518,7 @@ article {
 #tekst2 {
 	width: 100vw;
 	margin-bottom: 5vw;
+	margin-top: 5vw;
 }
 
 #tekst2 p {
@@ -549,12 +552,13 @@ article {
 #grafik4 {
 	margin: 2vw;
 	font-size: 1.5em;
-	margin-top: 4vw;
+	margin-top: 13vw;
 
 }
 
 .stil_bottom h2 {
 	text-align: center;
+	font-size: 3em;
 }
 
 .infografImg img {
@@ -765,6 +769,10 @@ article {
 	grid-template-columns: 1fr;
 }
 
+#headline {
+	font-size: 2em;
+}
+
 #cv #om {
 	background-color: #809DAE;
 	width: 90vw;
@@ -785,14 +793,14 @@ article {
 }
 
 #om p {
-	margin: 0.9vw;
-	font-size: 1.2em;
+	margin: 4vw;
+	font-size: 1.9em;
 }
 
 #om h2 {
 	text-align: center;
 	color: white;
-	font-size: 1.7em;
+	font-size: 4em;
 }
 
 #udstillinger {
@@ -805,6 +813,15 @@ article {
 	margin-top: 4vw;
 }
 
+.cv_titel {
+	font-size: 2em;
+}
+
+.cv_indhold {
+	font-size: 1.9em;
+}
+
+
 /*parameter for desktop visning af CV*/
 
 @media screen and (min-width: 768px) {
@@ -812,6 +829,7 @@ article {
 
 	#om p {
 		margin: 0.7vw;
+		font-size: 0.9em;
 	}
 
 	#om h2 {
@@ -878,19 +896,15 @@ article {
 	}
 }
 
-}
+
 
 /*--------------------------------------------------------*/
 
 /*Aktuelt*/
 
 .akt_container {
-	width: 80vw;
-	margin: auto;
-}
+	width: 100vw;
 
-article {
-	margin-bottom: 5vw;
 }
 
 .akt_overskrift {
@@ -905,6 +919,7 @@ article {
 
 	height: 60vw;
 	margin-top: 10vw;
+	margin-left: 5vw;
 
 
 
@@ -912,24 +927,44 @@ article {
 
 .akt_besk {
 	font-size: 1.8em;
+	width: 100vw;
+}
+
+.akt_besk p {
+	width: 90vw;
+	margin: auto;
 }
 
 #imgCont {
-	width: 80vw;
+	width: 100vw;
 	text-align: center;
 	margin-bottom: 5vw;
+}
+
+#imgCont img {
+	margin-top: 10vw;
+	margin-left: 0;
 }
 
 .akt_titel {
 	font-size: 2.2em;
 	margin-bottom: 5vw;
+	text-align: center;
 }
 
 .akt_link {
-	font-size: 2em;
-	color: red;
+	font-size: 3em;
+	color: black;
 	text-decoration: none;
+	margin-left: 5vw;
+	margin-bottom: 0vw;
+	transform: translateY(100px);
 
+}
+
+.akt_link p {
+	transform: translateY(-12vw);
+	margin-left: 5vw;
 }
 
 
@@ -939,7 +974,7 @@ article {
 
 
 	.akt_container {
-		width: 80vw;
+		width: 100vw;
 		margin: auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -963,20 +998,33 @@ article {
 
 	.akt_besk {
 		font-size: 1.8em;
-		margin-right: 2vw;
-		width: 20vw;
+		width: 30vw;
 	}
+
+	.akt_besk p {
+		width: 25vw;
+		margin: auto;
+	}
+
 
 	#imgCont {
 		width: 30vw;
 		text-align: left;
 		margin-bottom: 1vw;
-		;
+		margin-top: 2vw;
+		margin-left: 2.5vw;
+
+	}
+	#imgCont img {
+		margin-top: 2vw;
 	}
 
 	.akt_titel {
 		font-size: 3em;
 		margin-bottom: 2vw;
+		text-align: left;
+		margin-left: 2.5vw;
+
 	}
 
 	.akt_link {
@@ -985,6 +1033,10 @@ article {
 		text-decoration: none;
 
 
+	}
+	.akt_link p {
+		transform: none;
+		margin-left: 2vw;
 	}
 
 	.akt_link:hover {
