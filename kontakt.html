@@ -142,22 +142,10 @@
 	let kontaktJSON;
 
 
-	function onLoad() {
 
-		// if (window.innerWidth <= 768) {
-
-		function toggleMenu() {
-			document.querySelector(".burger").classList.toggle("change");
-			document.querySelector("nav").classList.toggle("show");
-		}
-		document.querySelector(".burger").addEventListener("click", toggleMenu);
-		document.querySelector("ul").addEventListener("click", toggleMenu);
-
-	}
 	//}
 
 	document.addEventListener("DOMContentLoaded", function(event) {
-		onLoad();
 		getJSON();
 	});
 
@@ -188,9 +176,7 @@
 		});
 	}
 
-	document.addEventListener("DOMContentLoaded", function(event) {
-		onLoad();
-	});
+
 
 
 	let modal = document.querySelector("#modal");
@@ -232,6 +218,23 @@
 	function skjulModal() {
 		//css med modal vis bliver skjult igen
 		modal.classList.remove("vis");
+	}
+
+	document.addEventListener("DOMContentLoaded", onLoad());
+
+	function onLoad() {
+
+		// if (window.innerWidth <= 768) {
+
+		function toggleMenu() {
+			document.querySelector(".burger").classList.toggle("change");
+			document.querySelector("nav").classList.toggle("show");
+			console.log("menu");
+		}
+		document.querySelector(".burger").addEventListener("click", toggleMenu);
+		document.querySelector("ul").addEventListener("click", toggleMenu);
+		console.log("menu2")
+
 	}
 
 </script>
