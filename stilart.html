@@ -5,7 +5,22 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="style.css">
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0/favicon-16x16.png">
+	<link rel="manifest" href="favicon_package_v0/site.webmanifest">
+	<link rel="mask-icon" href="favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Kanit|PT+Sans+Narrow|Teko" rel="stylesheet">
+	<link rel="icon" href="" type="image/gif" sizes="16x16">
+	<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 
 
 	<title>Stilart</title>
@@ -156,181 +171,112 @@
 
 		<!-- Tilmeldingsformular til Nyhedsbrev   -->
 
-		<div class="nyhedsbrev">
 
-			<!-- Knap til at åbne modal vindue/tilmeldings formular-->
-
-			<button id="tilmeld">
-                <p>Tilmeld dig mit nyhedsbrev!</p>
-            </button>
-
-			<!-- html for modal   -->
-			<section id="modal">
-				<!-- lukke knap  -->
-				<button id="close">Luk</button>
-				<!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
-				<div id="modal-content">
-					<form>
-						<h1>Tilmeld dig mit nyhedsbrev!</h1>
-						<br>
-						<p> Bliv informeret om kommende udstillinger og nyheder, hurtigt og nemt. </p>
-						<br>
-						<input id="navn" type="text" placeholder="Dit navn" required>
-						<input id="email" type="email" placeholder="Din email" required><br>
-						<label>
-                            <input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Charlotte Nielsen Keramik Nyhedsbrev </label>
-						<p>Ved at klikke ja erklære du dig enig med vilkår og betingelser og den tilhørende persondatapolitik. <a href="https://www.datatilsynet.dk/generelt-om-databeskyttelse/lovgivning/"> læs mere her</a> </p>
-						<input type="submit" value="send"> <span id="response"> </span> <br>
-
-					</form>
-				</div>
-			</section>
-		</div>
 
 	</footer>
 </body>
 
 </html>
 <script>
-    let stilJSON;
+	let stilJSON;
 
 
-    function onLoad() {
+	function onLoad() {
 
-        // if (window.innerWidth <= 768) {
+		// if (window.innerWidth <= 768) {
 
-        function toggleMenu() {
-            document.querySelector(".burger").classList.toggle("change");
-            document.querySelector("nav").classList.toggle("show");
-        }
-        document.querySelector(".burger").addEventListener("click", toggleMenu);
-        document.querySelector("ul").addEventListener("click", toggleMenu);
+		function toggleMenu() {
+			document.querySelector(".burger").classList.toggle("change");
+			document.querySelector("nav").classList.toggle("show");
+		}
+		document.querySelector(".burger").addEventListener("click", toggleMenu);
+		document.querySelector("ul").addEventListener("click", toggleMenu);
 
-    }
-    //}
+	}
+	//}
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        onLoad();
-        getJSON();
-    });
-
-
-    async function getJSON() {
-        myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/stilart");
-        /* her sætter jeg mit array som wordpress henter, til at være en json fil */
-        stilJSON = await myJSON.json();
-        console.log(stilJSON);
-        vispage();
+	document.addEventListener("DOMContentLoaded", function(event) {
+		onLoad();
+		getJSON();
+	});
 
 
-    }
-
-    function vispage() {
-        console.log("vis tekst");
-        stilJSON.forEach(tag => {
-
-            document.querySelector("[data-headline]").textContent = tag.acf.healine;
-
-            document.querySelector("[data-overskrift]").textContent = tag.acf.overskrift;
-
-            document.querySelector("[data-tekst1]").textContent = tag.acf.tekst1;
-
-            document.querySelector("[data-YT]").setAttribute("src", tag.acf.youtubevideo);
-
-            document.querySelector("[data-billede2]").setAttribute("src", tag.acf.billede2);
-
-            document.querySelector("[data-tekst2]").textContent = tag.acf.tekst2;
-
-            document.querySelector("[data-infografik1]").textContent = tag.acf.infografik1;
-
-            document.querySelector("[data-infografik2]").textContent = tag.acf.infografik2;
-
-            document.querySelector("[data-infografik3]").textContent = tag.acf.infografik3;
-
-            document.querySelector("[data-infografik4]").textContent = tag.acf.infografik4;
+	async function getJSON() {
+		myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/stilart");
+		/* her sætter jeg mit array som wordpress henter, til at være en json fil */
+		stilJSON = await myJSON.json();
+		console.log(stilJSON);
+		vispage();
 
 
+	}
 
-        });
-        document.getElementById("info1").addEventListener("click", visinfo1);
-        document.getElementById("info2").addEventListener("click", visinfo2);
-        document.getElementById("info3").addEventListener("click", visinfo3);
-        document.getElementById("info4").addEventListener("click", visinfo4);
-    }
+	function vispage() {
+		console.log("vis tekst");
+		stilJSON.forEach(tag => {
 
-    function visinfo1() {
-        console.log("vis info 1");
-        document.querySelector("#grafik1").classList.toggle("show");
-        document.querySelector("#grafik2").classList.remove("show");
+			document.querySelector("[data-headline]").textContent = tag.acf.healine;
 
-        document.querySelector("#grafik3").classList.remove("show");
-        document.querySelector("#grafik4").classList.remove("show");
+			document.querySelector("[data-overskrift]").textContent = tag.acf.overskrift;
 
-    }
+			document.querySelector("[data-tekst1]").textContent = tag.acf.tekst1;
 
-    function visinfo2() {
-        console.log("vis info 2");
-        document.querySelector("#grafik2").classList.toggle("show");
-        document.querySelector("#grafik1").classList.remove("show");
-        document.querySelector("#grafik3").classList.remove("show");
-        document.querySelector("#grafik4").classList.remove("show");
-    }
+			document.querySelector("[data-YT]").setAttribute("src", tag.acf.youtubevideo);
 
-    function visinfo3() {
-        console.log("vis info 3");
-        document.querySelector("#grafik3").classList.toggle("show");
-        document.querySelector("#grafik1").classList.remove("show");
-        document.querySelector("#grafik2").classList.remove("show");
-        document.querySelector("#grafik4").classList.remove("show");
-    }
+			document.querySelector("[data-billede2]").setAttribute("src", tag.acf.billede2);
 
-    function visinfo4() {
-        console.log("vis info 4");
-        document.querySelector("#grafik4").classList.toggle("show");
-        document.querySelector("#grafik2").classList.remove("show");
-        document.querySelector("#grafik1").classList.remove("show");
-        document.querySelector("#grafik3").classList.remove("show");
-    }
+			document.querySelector("[data-tekst2]").textContent = tag.acf.tekst2;
 
-    let modal = document.querySelector("#modal");
-    let tilmeld = document.querySelector("#tilmeld");
-    let close = document.querySelector("#close");
+			document.querySelector("[data-infografik1]").textContent = tag.acf.infografik1;
 
-    //kode til at svar teksten bliver vist
-    let svartekst = "";
-    document.querySelector("form").addEventListener("submit", ajaxCall);
+			document.querySelector("[data-infografik2]").textContent = tag.acf.infografik2;
 
-    //kode
-    async function ajaxCall(e) {
-        e.preventDefault();
-        let navn = this.querySelector("input[type=text]").value;
-        console.log(navn);
-        let url = "nyhedsbrev.php?navn=" + navn;
-        let svar = await fetch(url);
-        svartekst = await svar.text();
-        show();
-        this.querySelector("input[type=text]").value = "";
-    }
+			document.querySelector("[data-infografik3]").textContent = tag.acf.infografik3;
 
-    function show(response) {
-        document.querySelector("#response").textContent = svartekst;
-    }
+			document.querySelector("[data-infografik4]").textContent = tag.acf.infografik4;
 
-    tilmeld.addEventListener("click", visModal);
 
-    function visModal() {
 
-        //ved klik på tilmeldingsboxen vises modal vindu med indhold.
-        modal.classList.add("vis");
+		});
+		document.getElementById("info1").addEventListener("click", visinfo1);
+		document.getElementById("info2").addEventListener("click", visinfo2);
+		document.getElementById("info3").addEventListener("click", visinfo3);
+		document.getElementById("info4").addEventListener("click", visinfo4);
+	}
 
-        //ved klik på close button fjernes modal vinduet med indholdet.
-        close.addEventListener("click", skjulModal);
+	function visinfo1() {
+		console.log("vis info 1");
+		document.querySelector("#grafik1").classList.toggle("show");
+		document.querySelector("#grafik2").classList.remove("show");
 
-    }
+		document.querySelector("#grafik3").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
 
-    function skjulModal() {
-        //css med modal vis bliver skjult igen
-        modal.classList.remove("vis");
-    }
+	}
+
+	function visinfo2() {
+		console.log("vis info 2");
+		document.querySelector("#grafik2").classList.toggle("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik3").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
+	}
+
+	function visinfo3() {
+		console.log("vis info 3");
+		document.querySelector("#grafik3").classList.toggle("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik2").classList.remove("show");
+		document.querySelector("#grafik4").classList.remove("show");
+	}
+
+	function visinfo4() {
+		console.log("vis info 4");
+		document.querySelector("#grafik4").classList.toggle("show");
+		document.querySelector("#grafik2").classList.remove("show");
+		document.querySelector("#grafik1").classList.remove("show");
+		document.querySelector("#grafik3").classList.remove("show");
+	}
+
 
 </script>

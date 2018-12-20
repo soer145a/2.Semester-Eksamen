@@ -193,8 +193,9 @@ nav a:hover {
 
 
 	li a {
-		font-size: 1.8em;
+		font-size: 2.1em;
 		color: var(--stoney);
+		letter-spacing: 2px;
 	}
 
 	li a:hover {
@@ -268,20 +269,21 @@ nav a:hover {
 
 @media screen and (min-width:1080px) {
 	#splash {
-		width: 48vw;
-		margin: 2vw;
+		width: 40vw;
+		margin: 1vw;
 		height: 35vw;
 	}
 
 	#forsideh2 {
 		font-size: 2.5em;
+		margin-top: 0vw;
 	}
 
 	#forsideDesc {
 		font-size: 2em;
 		width: 50vw;
 		line-height: 1.5;
-		margin: 1vw 1vw 0 0;
+		margin: 1vw 1vw 1vw 4vw;
 
 	}
 
@@ -302,6 +304,7 @@ nav a:hover {
 	.for_container {
 		display: grid;
 		grid-template-rows: 1fr 1fr;
+		width: 60vw;
 	}
 	.for_presentation {
 		grid-row-start: 2;
@@ -309,6 +312,16 @@ nav a:hover {
 	.for_portraet {
 		grid-column: 1/3;
 		text-align: center;
+	}
+	.for_imgcontainer {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 30vw;
+		margin-top: 2vw;
+		margin-left: auto;
+		margin-right: auto;
+
 	}
 
 }
@@ -621,9 +634,9 @@ article {
 
 	.stil_top h2 {
 		text-align: left;
-		font-size: 2em;
-		margin-bottom: 5vw;
-		margin-top: 5vw;
+		font-size: 6em;
+		margin-bottom: 2vw;
+		margin-top: 2vw;
 		margin-left: 5vw
 	}
 
@@ -659,7 +672,7 @@ article {
 
 	.stil_bottom h2 {
 		text-align: center;
-		font-size: 2em;
+		font-size: 4em;
 	}
 	.stil_bottom {
 		margin-top: 5vw;
@@ -847,6 +860,9 @@ article {
 		font-size: 2em;
 		margin: 1.3vw;
 	}
+	#omTxT h2 {
+		font-size: 2em;
+	}
 
 	#udstillinger {
 		margin-top: 6vw;
@@ -873,7 +889,7 @@ article {
 	font-size: 2em;
 	margin-bottom: 5vw;
 	margin-top: 5vw;
-	margin-left: 5vw
+	margin-left: 0vw
 }
 
 .akt_img {
@@ -939,6 +955,7 @@ article {
 	.akt_besk {
 		font-size: 1.8em;
 		margin-right: 2vw;
+		width: 20vw;
 	}
 
 	#imgCont {
@@ -1145,7 +1162,10 @@ footer {
 		padding-left: 50px;
 		margin-top: 5px;
 
+
+
 	}
+
 
 }
 
@@ -1215,7 +1235,7 @@ footer {
 	}
 
 	.adresse {
-		font-size: 1.4em;
+		font-size: 2em;
 	}
 
 }
