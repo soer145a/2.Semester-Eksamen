@@ -181,7 +181,7 @@
 
 
 	async function getJSON() {
-		myJSON = await fetch("http://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
+		myJSON = await fetch("https://soren-remboll.com/kea/eksamen_semester_2/wordpress/wp-json/wp/v2/Forside");
 		/* her sætter jeg mit array som wordpress henter, til at være en json fil */
 		forsideJSON = await myJSON.json();
 		console.log(forsideJSON);
